@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'ProductSans';
+  src: url('./assets/fonts/ProductSans-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('./assets/fonts/ProductSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('./assets/fonts/ProductSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ProductSans';
+  src: url('./assets/fonts/ProductSans-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+body {
+  background-color: #e1e1e1;
+}
+
+h1 {
+  font-family: "ProductSans", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+p{
+  font-family: "ProductSans", sans-serif;
+  font-weight: 300;
+}
+
+a{
+  text-decoration: none !important;
+  font-family: "ProductSans", sans-serif;
+  font-size: 16px;
+}

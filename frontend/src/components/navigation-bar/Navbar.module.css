@@ -1,0 +1,172 @@
+.navBar {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  height: 80.67px;
+  margin: 31px 10px 0 10px;
+  padding: 0 21px 0 21px;
+}
+
+/* Sidebar */
+.hamburgerBar {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.sideBar {
+  max-width: 50vw !important;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+}
+
+.closeButton svg rect {
+  transition: fill 0.3s ease;
+}
+
+.closeButton:hover svg rect {
+  fill: #EA4335;
+}
+
+.otherSection{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Navigation bar sections */
+.events{
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: black;
+  transition: color 0.3s ease, transform 0.1s ease;
+  transform-origin: left;
+  overflow: visible;
+}
+
+.events svg {
+  transform: translateY(-1px);
+  fill: currentColor;
+  transition: fill 0.1s ease;
+}
+
+.events:hover{
+  color: #EA4335;
+  transform: scale(1.25);
+}
+
+
+.home {
+  color: black;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.1s ease;
+  display: inline-block;
+  transform-origin: left;
+}
+
+.home:hover {
+  color: #EA4335;
+  transform: scale(1.25);
+}
+
+.project {
+  color: black;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.1s ease;
+  display: inline-block;
+  transform-origin: left;
+}
+
+.project:hover {
+  color: #0f9d58;
+  transform: scale(1.25);
+}
+
+.team {
+  color: black;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.1s ease;
+  display: inline-block;
+  transform-origin: left;
+}
+
+.team:hover {
+  color: #4285f4;
+  transform: scale(1.25);
+}
+
+.joinButton{
+  background: none;
+  padding: 4px 25px 4px 25px;
+  margin: 0;
+  font-family: "ProductSans", sans-serif;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: color 0.3s ease, transform 0.1s ease, background-color 0.1s ease, border 0.1s ease;
+  display: inline-block;
+  transform-origin: left;
+}
+
+.joinButton:hover{
+  color:white;
+  background-color: #EA4335;
+  border: none;
+  transform: scale(1.20);
+}
+
+.profile {
+  color: black;
+  font-size: 16px;
+  transition: color 0.1s ease, transform 0.1s ease;
+  margin-right: 1px;
+
+}
+
+.profile:hover{
+  color: #EA4335;
+}
+
+.profile svg{
+  fill: currentColor;
+  transition: fill 0.1s ease;
+}
+
+.profileIcon{
+  margin-top: 113px;
+  margin-bottom: 150px;
+  width: 155px;
+  height: 155px;
+}
+
+
+
+/* Responsive Logo */
+@media (min-width: 992px) {
+  .logo {
+    width: 313px;
+    height: 54px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+      width: 320px;
+      height: 54px;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 767px) {
+  .logo {
+    width: 193px;
+    height: 34px;
+  }
+
+  .profileIcon{
+    width: 75px;
+    height: 75px;
+    margin-bottom: 20px;
+  }
+}
