@@ -1,4 +1,4 @@
-import Navbar from "../components/navigation-bar/Navbar";
+import Navbar from "../../components/navigation-bar/Navbar";
 
 function Project(){
   return(
