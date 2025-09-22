@@ -1,4 +1,4 @@
-import Project from './pages/Project'
+import Project from './pages/project-page/Project'
 import "./index.css"; 
 
 function App() {
