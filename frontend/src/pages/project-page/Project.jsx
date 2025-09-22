@@ -4,10 +4,13 @@ import ProjectCard from "../../components/project-card/ProjectCard";
 import styles from "../project-page/Project.module.css";
 import heroStyles from "../../components/hero-text/Herotext.module.css";
 import websiteProjectImg from "../../assets/images/project-images/gdgoc-website.svg";
+import stayTunedMobile from "../../assets/images/project-images/stay-tuned-mobile.svg";
+import stayTunedTablet from "../../assets/images/project-images/stay-tuned-tablet.svg";
+import stayTunedDesktop from "../../assets/images/project-images/stay-tuned-desktop.svg";
 
 function Project(){
   return(
-    <>
+    <div className="d-flex flex-column align-items-center justify-content-center">
       <Navbar />
       <HeroText 
         header = "Explore our Project"
@@ -24,7 +27,16 @@ function Project(){
         designer="Juan Dela Cruz"
         developer="Cruz Dela Juan"
       />
-    </>
+      <div className={`${styles.container1} d-md-none d-flex`}>
+        <img src={stayTunedMobile} alt="stay-tuned" />
+      </div>
+      <div className={`${styles.container1} d-none d-md-flex d-xl-none`}>
+        <img src={stayTunedTablet} alt="stay-tuned" />
+      </div>
+      <div className={`${styles.container2} d-none d-xl-flex flex-column align-items-center`}>
+        <img src={stayTunedDesktop} alt="stay-tuned" />
+      </div>
+    </div>
   );
 }
 
