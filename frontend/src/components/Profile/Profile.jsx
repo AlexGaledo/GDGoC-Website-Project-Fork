@@ -4,7 +4,7 @@ import Camera from './Profile-assets/camera.svg';
 function Profile(){
     const firstName = 'Irwen';
     const lastName = 'Fronda';
-    const username = 'wen';
+    const username = '@' + 'wen';
     const gdgID = 1448;
     const expNumber = 0;
     const idPad = 'GDGTUP-25-';
@@ -26,7 +26,7 @@ function Profile(){
                         <img src={Camera} className='camera'/>
                     </div>
                     <div className="user-name-id">
-                        <p className='username'>@{username}</p>
+                        <p className='username'>{username}</p>
                         <p className='gdgID'>{idPad}{gdgID}</p>
                     </div>
                 </div>
