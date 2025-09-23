@@ -1,0 +1,248 @@
+.mainContainer{
+  width: 100%;
+}
+
+.footerContainer {
+  background-color: #EBEBEB;
+  width: 100%;
+  padding: 24px 32px 24px 32px;
+}
+
+.footerTitle {
+  font-family: "ProductSansBlack", sans-serif;
+  font-size: 32px;
+  color: #EA4335;
+  margin-bottom: 16px;
+}
+
+.footerSubtext {
+  font-family: "ProductSans", sans-serif;
+  font-size: 18px;
+  color: #838383;
+  margin-bottom: 16px;
+}
+
+.buttonSection {
+  margin-bottom: 33px;
+}
+
+/* Text buttons */
+.joinButton {
+  font-family: "ProductSans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 43px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #EA4335;
+}
+
+.messageButton {
+  font-family: "ProductSans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 9px 25px;
+  border-radius: 8px;
+  border: 2px solid #EA4335;
+  background-color: none;
+  color: #EA4335;
+}
+
+/* Social Media buttons */
+.gmailButton,
+.facebookButton,
+.instagramButton,
+.twitterButton,
+.linkedinButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Social media buttons initial state and hover */
+.gmailButton svg path {
+  transition: fill 0.1s ease;
+}
+
+.gmailBlue,
+.gmailGreen,
+.gmailRed,
+.gmailYellow,
+.gmailDarkRed {
+  fill: rgba(142, 144, 148, 0.5);
+}
+
+.gmailButton:hover .gmailBlue {
+  fill: #4285F4;
+}
+
+.gmailButton:hover .gmailGreen {
+  fill: #34A853;
+}
+
+.gmailButton:hover .gmailRed {
+  fill: #EA4335;
+}
+
+.gmailButton:hover .gmailYellow {
+  fill: #FBBC04;
+}
+
+.gmailButton:hover .gmailDarkRed {
+  fill: #C5221F;
+}
+
+.facebookButton svg path {
+  fill: rgba(142, 144, 148, 0.5);
+  transition: fill 0.1s ease;
+}
+
+.facebookButton:hover svg path {
+  fill: #1877F2;
+}
+
+.instagramButton svg {
+  width: 41px;
+  height: 40px;
+  transition: filter 0.1s ease;
+  filter: grayscale(100%) opacity(0.5);
+}
+
+.instagramButton:hover svg {
+  filter: none;
+}
+
+.twitterButton svg path{
+  fill: rgba(142, 144, 148, 0.5);
+  transition: fill 0.1s ease;
+}
+
+.twitterButton:hover svg path {
+  fill: #1D9BF0;
+}
+
+.linkedinButton svg path {
+  fill: rgba(142, 144, 148, 0.5);
+  transition: fill 0.1s ease;
+}
+
+.linkedinButton:hover svg path {
+  fill: #0077B7;
+}
+
+/* sub footer design */
+
+.subFooter{
+  background-color: #E5E7EB;
+  width: 100%;
+  margin: 0;
+  padding: 15px 35px 15px 35px;
+}
+
+.logo{
+  width: 320px;
+  height: 54px;
+  margin-bottom: 23px;
+}
+
+.events {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: black;
+  transition: color 0.3s ease, transform 0.1s ease;
+  transform-origin: left;
+  overflow: visible;
+  margin-bottom: 16px;
+}
+
+.events svg {
+  transform: translateY(-1px);
+  fill: currentColor;
+  transition: fill 0.1s ease;
+}
+
+.events:hover {
+  color: #4285f4;
+  transform: scale(1.25);
+}
+
+
+.home {
+  color: black;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.1s ease;
+  display: inline-block;
+  transform-origin: left;
+  margin-bottom: 16px;
+}
+
+.home:hover {
+  color: #EA4335;
+  transform: scale(1.25);
+}
+
+.project {
+  color: black;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.1s ease;
+  display: inline-block;
+  transform-origin: left;
+  margin-bottom: 16px;
+}
+
+.project:hover {
+  color: #0f9d58;
+  transform: scale(1.25);
+}
+
+.team {
+  color: black;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.1s ease;
+  display: inline-block;
+  transform-origin: left;
+  margin-bottom: 16px;
+}
+
+.team:hover {
+  color: #4285f4;
+  transform: scale(1.25);
+}
+
+.copyright{
+  text-align: center;
+  color: #202124;
+  font-family: "ProductSans", sans-serif;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .footerSubtext{
+    font-size: 20px;
+  }
+
+  .logo{
+    width: 370px;
+  }
+
+  .copyright{
+    font-size: 18px;
+  }
+
+  .home,
+  .events,
+  .team,
+  .project{
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footerContainer{
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+}
