@@ -1,6 +1,9 @@
+// react components
 import Navbar from "../../components/navigation-bar/Navbar";
 import HeroText from "../../components/hero-text/Herotext";
 import ProjectCard from "../../components/project-card/ProjectCard";
+import Footer from "../../components/footer-section/Footer";
+// css modules and images
 import styles from "../project-page/Project.module.css";
 import heroStyles from "../../components/hero-text/Herotext.module.css";
 import websiteProjectImg from "../../assets/images/project-images/gdgoc-website.svg";
@@ -36,6 +39,7 @@ function Project(){
       <div className={`${styles.container2} d-none d-xl-flex flex-column align-items-center`}>
         <img src={stayTunedDesktop} alt="stay-tuned" />
       </div>
+      <Footer />
     </div>
   );
 }
