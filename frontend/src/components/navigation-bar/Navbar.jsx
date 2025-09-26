@@ -1,8 +1,24 @@
 import styles from './Navbar.module.css';
 import logo from '../../assets/images/GDGOC logo.svg';
 import hamburgerBar from '../../assets/images/Hamburger-bar.svg';
+import Profile from '../Profile/Profile';
+import React, { useState } from 'react';
+
 
 function Navbar() {
+  const [showProfile, setShowProfile] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  const handleClose = () => {
+    setIsClosing(true); // trigger exit animation
+    setTimeout(() => {
+      setShowProfile(false); // unmount AFTER animation
+      setIsClosing(false);   // reset
+    }, 300); // match your CSS animation duration (0.3s)
+  };
+
+  
+  
   return (
     <>
       {/* Navigation Bar */}
@@ -25,7 +41,10 @@ function Navbar() {
             <a href="#" className={styles.project}>Project</a>
             <a href="#" className={styles.team}>Team</a>
             <button className={styles.joinButton}>JOIN US</button>
-            <a href='#' className={styles.profile}>
+            <button type='button' className={styles.profile}
+              onClick={e => {
+                setShowProfile(true);
+              }}>
               <svg width="45" height="45" viewBox="0 0 45 45" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1833_5358)">
                   <path
@@ -45,10 +64,10 @@ function Navbar() {
                   </clipPath>
                 </defs>
               </svg>
-            </a>
+            </button>
           </div>
         </div>
-      </div>
+      </div> 
 
       {/* Sidebar */}
       <div className={`offcanvas offcanvas-end ${styles.sideBar}`} id="sideBar">
@@ -88,7 +107,11 @@ function Navbar() {
         {/* Sidebar sections */}
         <div className='offcanvas-body'>
           <div className='d-flex flex-column align-items-center'>
-            <a href='#' className={styles.profile}>
+            <button type='button' className={styles.profile}
+              onClick={e => {
+                setShowProfile(true);
+              }}
+            >
               <svg className={styles.profileIcon} width="45" height="45" viewBox="0 0 45 45" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1833_5358)">
                   <path
@@ -108,7 +131,7 @@ function Navbar() {
                   </clipPath>
                 </defs>
               </svg>
-            </a>
+            </button>
 
           {/* Other Sections */}
             <div className={`${styles.otherSection} d-flex flex-column gap-5 align-items-center`}>
@@ -128,6 +151,14 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      
+      {showProfile && (
+          <div className="profile-modal-overlay" onClick={handleClose}>
+            <Profile onClose={handleClose} isClosing={isClosing}/>
+          </div>
+        )
+      }
     </>
   );
 }

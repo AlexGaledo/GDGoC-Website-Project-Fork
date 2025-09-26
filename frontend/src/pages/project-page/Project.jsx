@@ -18,6 +18,7 @@ function Project(){
   return(
     <div className="d-flex flex-column align-items-center justify-content-center">
       <Navbar />
+      
       <HeroText 
         header = "Explore our Project"
         subtext = {
