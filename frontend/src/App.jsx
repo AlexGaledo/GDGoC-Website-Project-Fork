@@ -1,13 +1,14 @@
 import Project from './pages/project-page/Project'
 import "./index.css"; 
-import Profile from './components/Profile/Profile';
+import { UserProvider } from './context/UserContext';
 
 function App() {
   return(
-    <div>
-      <Profile/>
-      {/* <Project /> */}
-    </div>
+    <UserProvider>
+      <div>
+        <Project/>
+      </div>
+    </UserProvider>
   );
 }
 
