@@ -117,13 +117,7 @@
   transform: scale(1.20);
 }
 
-/* .profile {
-  color: black;
-  font-size: 16px;
-  transition: color 0.1s ease, transform 0.1s ease;
-  margin-right: 1px;
 
-} */
 
 .profile {
   border: none;          
@@ -137,7 +131,7 @@
 
 
 .profilePicNavbar {
-    border: solid 3px hsla(0, 0%, 0%, 0.87);
+    border: solid 2px hsla(0, 0%, 0%, 0.87);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,8 +149,7 @@
 
 
 .profilePicSideNav{
-    
-    border: solid 3px hsla(0, 0%, 0%, 0.87);
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +162,7 @@
 
 .profilePicSideNav:hover {
   transform: scale(1.2);
-  transition: transform 0.3s ease;
+  transition: transform 0.s ease;
   border: none;
 }
 
