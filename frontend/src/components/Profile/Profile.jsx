@@ -15,17 +15,19 @@ function Profile({ onClose , isClosing }){
 
 
     const [exiting, setExiting] = useState(false);
-    // const [image, setImage] = useState(null);
 
     const handleExit = () => {
         setExiting(true); 
     };
 
     const handleFileChange = (event) => {
-    const file = event.target.files[0];
+        const file = event.target.files[0];
         if (file) {
-            const imgUrl = URL.createObjectURL(file); 
-            setProfilePic(imgUrl);
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setProfilePic(reader.result); // base64 string
+            };
+            reader.readAsDataURL(file);
         }
     };
 
@@ -49,10 +51,8 @@ function Profile({ onClose , isClosing }){
                 </div>
                 <div className="inner-container">
                     <div 
-                        className={`profilePic ${profilePic ? "hasImage" : ""}`}
-                        style={ profilePic ? {
-                            backgroundImage:`
-                            url(${profilePic})`}: undefined }                      
+                        className={`profilePic ${profilePic ? "hasImage" : "defaultBg"}`}
+                        style={ profilePic ? { backgroundImage:`url(${profilePic})`}: undefined }                      
                     >
                         <label htmlFor="profile-upload">
                             <img src={Camera} alt="Profile" className="camera" />
