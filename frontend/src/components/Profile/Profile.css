@@ -1,0 +1,258 @@
+/* Abstract background shape for light gradient effect */
+.profile-bg-abstract {
+    position: absolute;
+    bottom: -120px;
+    left: -90px;
+    width: 690px;
+    height: 720px;
+    background: radial-gradient(circle at 60% 40%, rgba(255, 92, 55, 0.18) 0%, hsla(0, 0%, 100%, 0) 80%),
+                radial-gradient(circle at 30% 80%, rgba(244, 244, 66, 0.12) 0%, hsla(0, 0%, 100%, 0) 80%),
+                radial-gradient(circle at 80% 20%, rgba(53, 68, 234, 0.1) 0%, hsla(0, 0%, 100%, 0) 80%);
+    z-index: -1;
+    filter: blur(80px);
+    pointer-events: none;
+    border-radius: 35%;
+    border: none;
+}
+
+.profile-bg-clip {
+    position: absolute;
+    inset: 0px;
+    border-radius: 24px; /* match .profile-container */
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.profile-container {
+    height: 500px;
+    width: 800px;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 32px;
+    top: 0px;
+    bottom: 0px;
+    position: relative;
+    z-index: 11;
+}
+
+.name {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name h4 {
+    font-weight: 800;
+    font-size: 2rem;
+    font-family: 'Works Sans', sans-serif;
+    margin: 0;
+}
+
+.inner-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    gap: 10px;
+
+}
+
+
+.profilePic {
+    width: 220px;
+    height: 220px;
+    
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin: 15px;
+    border: solid 7px hsla(0, 0%, 100%, 1);
+    position: relative;
+}
+
+.profilePic.hasImage {
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.profilePic.defaultBg {
+    background:
+        linear-gradient(-297deg, rgba(255, 0, 0, .6) 0%, hsla(0, 0%, 100%, 0.3) 50%, rgba(237, 221, 83, .6) 100%),
+        linear-gradient(157deg, rgba(31, 255, 14, .6) 0%, hsla(0, 0%, 100%, 0.3), rgba(0, 26, 255, .6) 100%);
+}
+
+
+
+.user-name-id {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.username{
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 0;
+    font-family: 'Works Sans', sans-serif;
+    color: hsla(0, 0%, 0%, 0.44);
+}
+
+.gdgID{
+    font-family: 'Works Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: hsla(225, 6%, 13%, 0.74);
+    margin: 0;
+    width: 100%;
+}
+
+.exp-box {
+    width: 80%;
+    padding: 10px 20px;
+    margin-top: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;    
+   
+    background: linear-gradient(90deg, rgba(234, 67, 53, .6) 0%, rgba(251, 188, 4, .6) 35%, rgba(15, 157, 88, .6) 65%, rgba(66, 133, 244, 0.6) 100%);
+    box-shadow: inset 0 0 0 3px hsla(0, 0%, 100%, 1);
+    border-radius: 12px;
+}
+
+.exp-num {
+    font-size: 3.5rem;
+    font-weight: 1000;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.xp{
+    font-size: 1rem;
+    font-weight: 900;
+    color: white;
+    margin-top: 22px;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+
+
+
+/* When profile icon isClicked */
+
+.profile-modal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 110; /* Make sure it appears above other content */
+    animation: slideInUp 0.3s ease-out forwards;
+}
+
+/* exit animation */
+.profile-exit {
+  animation: slideOutUp 0.3s ease-in forwards;
+}
+
+
+.profile-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.2); /* Optional: for a modal overlay effect */
+    z-index: 2000 !important;
+}
+
+
+
+/* Camera Icon */
+.camera {
+    width: 40px;
+    height: 40px;
+    padding: 3px;
+    position: absolute;
+    bottom: -10px;
+    right: 25px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    fill: #EA4335;
+    display: flex;
+    align-items: center;
+}
+.camera:hover {
+    filter: brightness(0.9);
+    background-color: hsl(0, 0%, 100%);
+    pointer-events: pointer;
+}
+
+/* Triangle-ExitButton */
+.ph--triangle-fill {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+
+    background: none;
+    border: none;
+    border-radius: 0px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23FFFFFF' d='M236.78 211.81A24.34 24.34 0 0 1 215.45 224H40.55a24.34 24.34 0 0 1-21.33-12.19a23.51 23.51 0 0 1 0-23.72l87.43-151.87a24.76 24.76 0 0 1 42.7 0l87.45 151.87a23.51 23.51 0 0 1-.02 23.72'/%3E%3C/svg%3E");
+    z-index: 2;
+}
+
+.ph--triangle-fill:hover {
+    filter: brightness(0.9);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23EA4335' d='M236.78 211.81A24.34 24.34 0 0 1 215.45 224H40.55a24.34 24.34 0 0 1-21.33-12.19a23.51 23.51 0 0 1 0-23.72l87.43-151.87a24.76 24.76 0 0 1 42.7 0l87.45 151.87a23.51 23.51 0 0 1-.02 23.72'/%3E%3C/svg%3E");
+    pointer-events: pointer;
+}
+
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%); /* starts below screen */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* normal position */
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%); /* slides up off screen */
+    opacity: 0;
+  }
+}

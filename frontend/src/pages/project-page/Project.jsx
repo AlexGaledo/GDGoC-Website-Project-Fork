@@ -11,10 +11,14 @@ import stayTunedMobile from "../../assets/images/project-images/stay-tuned-mobil
 import stayTunedTablet from "../../assets/images/project-images/stay-tuned-tablet.svg";
 import stayTunedDesktop from "../../assets/images/project-images/stay-tuned-desktop.svg";
 
+//Profile
+import Profile from "../../components/Profile/Profile";
+
 function Project(){
   return(
     <div className="d-flex flex-column align-items-center justify-content-center">
       <Navbar />
+      
       <HeroText 
         header = "Explore our Project"
         subtext = {
@@ -39,6 +43,7 @@ function Project(){
       <div className={`${styles.container2} d-none d-xl-flex flex-column align-items-center`}>
         <img src={stayTunedDesktop} alt="stay-tuned" />
       </div>
+      {/* <Profile/> */}
       <Footer />
     </div>
   );
