@@ -1,11 +1,14 @@
 import Project from './pages/project-page/Project'
 import "./index.css"; 
+import { UserProvider } from './context/UserContext';
 
 function App() {
   return(
-    <div>
-      <Project />
-    </div>
+    <UserProvider>
+      <div>
+        <Project/>
+      </div>
+    </UserProvider>
   );
 }
 
