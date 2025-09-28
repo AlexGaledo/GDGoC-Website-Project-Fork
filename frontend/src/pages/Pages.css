@@ -1,0 +1,86 @@
+.status-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  min-height: 70vh;
+  gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+.content-text {
+  flex: 1 1 50%;
+  min-width: 300px;
+}
+
+.status-right {
+  flex: 1 1 30%;
+  min-width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.status-right img {
+  max-width: 350px;
+  width:350px;
+  height: auto;
+}
+
+.footerTitle {
+  font-family: "ProductSans Black", sans-serif;
+  font-size: 32px;
+  color: #EA4335;
+  margin-bottom: 16px;
+}
+
+
+/* Membership Page */
+.membership-page {
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 10%;
+}
+
+.status-top {
+  margin-bottom: 20px;
+}
+
+.status-img {
+  max-width: 280px;
+  height: auto;
+}
+
+.membershipTitle {
+  font-family: "ProductSans Black", sans-serif;
+  font-size: 36px;
+  color: #ea4335;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.membership p{
+  max-width: 700px;
+  margin: 0 auto;       
+  text-align: center;     
+  font-family: 'Product Sans Medium', sans-serif;
+  opacity:0.6;          
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+.status-page {
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 5%;
+}
+
+.status-right {
+  margin-top: 2rem;
+}
+
+.status-right img {
+  max-width: 300px;
+}
+}
