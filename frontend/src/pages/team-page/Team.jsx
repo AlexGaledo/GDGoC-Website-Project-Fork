@@ -22,12 +22,12 @@ function Team(){
       <div className="align-items-center justify-content-center m-4">
         <h1 className={styles.department}>Executive Board Officers</h1>
       </div>
-      <div className="container align-items-center justify-content-center">
-        <div className="row g-0">
-          <a href="" target="_blank" className="col-6 d-flex align-items-center justify-content-center">
+      <div className="d-flex">
+        <div className="row g-3">
+          <a href="" target="_blank" className="col-6 ">
             <img src={EB.Serapio} alt="Kien_Leriss_R._Serapio" className={styles.image}/>
           </a>
-          <a href="" target="_blank" className="col-6 d-flex align-items-center justify-content-center">
+          <a href="" target="_blank" className="col-6">
             <img src={EB.Serapio} alt="Kien_Leriss_R._Serapio" className={styles.image}/>
           </a>
         </div>
