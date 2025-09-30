@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import logo from '../../assets/images/GDGOC logo.svg';
 import hamburgerBar from '../../assets/images/Hamburger-bar.svg';
@@ -32,7 +33,7 @@ function Navbar() {
             <img src={hamburgerBar} alt="button"/>
           </button>
           <div className='d-none d-xl-flex align-items-center gap-5'>
-            <a href="#" className={styles.home}>Home</a>
+            <Link to="/" className={styles.home}>Home</Link>
             <a href="#" className={styles.events}>Events
               <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -41,8 +42,8 @@ function Navbar() {
                 />
               </svg>
             </a>
-            <a href="#" className={styles.project}>Project</a>
-            <a href="#" className={styles.team}>Team</a>
+            <Link to="/project" className={styles.project}>Project</Link>
+            <Link to="/team" className={styles.team}>Team</Link>
             <button className={styles.joinButton}>JOIN US</button>
             <button type='button' className={styles.profile}
               onClick={e => {
