@@ -44,6 +44,12 @@ function Profile({ onClose , isClosing }){
                     <div className="profile-bg-abstract"></div>
                 </div>
                 <button className='ph--triangle-fill' onClick={handleExit}></button>
+
+                <div className='logOut profile'>
+                    <span class="logoutText"></span> 
+                    <span class="logoutIcon"></span>
+                </div>
+
                 <div className="name">
                     <h4>
                         {firstName}, {lastName}
