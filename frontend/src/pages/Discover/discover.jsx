@@ -1,5 +1,7 @@
 import React from "react";
 import "./Discover.css";
+import Navbar from "../../components/navigation-bar/Navbar";
+import Footer from "../../components/footer-section/Footer";
 
 
 /* images */
@@ -17,6 +19,7 @@ import asset_4_7 from "../../assets/home-images/asset_4_7.png";
 export default function Content() {
   return (
     <section className="content">
+      <Navbar />
       <div className="waves">
         <img src={asset_1} alt="wave 1" />
         <img src={asset_2_5} alt="wave 2" />
@@ -132,6 +135,7 @@ export default function Content() {
           </div>
         </section>
       </div>
+      <Footer />
     </section>
   );
 }
