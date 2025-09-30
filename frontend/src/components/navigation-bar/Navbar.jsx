@@ -91,6 +91,10 @@ function Navbar() {
               </g>
             </svg>
           </button>
+          <div className='logOut'>
+            <span class="logoutText"></span> 
+            <span class="logoutIcon"></span>
+          </div>
         </div>
         {/* Sidebar sections */}
         <div className='offcanvas-body'>
