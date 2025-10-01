@@ -9,8 +9,8 @@ function Footer(){
           <h1 className={styles.footerTitle}>Let's connect!</h1>
             <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Want to be part of our community? Have something in mind?</h3>
             <div className={`${styles.buttonSection} d-flex flex-row justify-content-center align-items-center gap-3`}>
-              <button className={styles.joinButton}>Join us!</button>
-              <button className={styles.messageButton}>Message us!</button>
+              <button className={styles.btnprimary}>Join us!</button>
+              <button className={styles.btnsecondary}>Message us!</button>
             </div>
         </div>
         <div className="d-flex flex-column align-items-center align-items-md-start">
@@ -108,7 +108,7 @@ function Footer(){
         <a href="#" className={styles.project}>Project</a>
         <a href="#" className={styles.team}>Team</a>
         </div>
-        <p className={styles.copyright}>&copy; 2025 Google Developer Groups on Campus TUP Manila. All Rights Reserved.</p>
+        <p className={styles.copyright}>&copy; 2025 Google Developer Groups on Campus TUP Manila. <br/> All Rights Reserved.</p>
       </div>
     </div>
   );
