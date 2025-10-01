@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
     const [username, setUsername] = useState("@username");
     const [gdgID, setGdgID] = useState(1458);
     const [expNumber, setExpNumber] = useState(1000);
-    const [idPad, setIdPad] = useState("GDGTUP-25-");
+    const [idPad, setIdPad] = useState("GDGTUP-25-1448");
     
     const [profilePic, setProfilePic] = useState(() => {
         const storedPic = localStorage.getItem("profilePic");
