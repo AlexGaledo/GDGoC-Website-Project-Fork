@@ -9,4 +9,117 @@
 .image{
   width: 160px;
   height: 243px;
+  display: block;
+}
+
+.imgContainer{
+  position: relative;
+  display: inline-block;
+}
+
+.blueContainer{
+  position: absolute;
+  top: 81%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92.3%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to top, #4285F4, transparent);
+  padding-bottom: 10px;
+  border-radius: 0 0 32px 32px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.redContainer {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92.3%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to top, #EA4335, transparent);
+  padding-bottom: 10px;
+  border-radius: 0 0 32px 32px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.yellowContainer {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92.3%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to top, #FBBC04, transparent);
+  padding-bottom: 10px;
+  border-radius: 0 0 32px 32px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.greenContainer {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92.3%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(to top, #34A853, transparent);
+  padding-bottom: 10px;
+  border-radius: 0 0 32px 32px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.linkedin{
+  width: 30px;
+  height: 30px;
+}
+
+.imgContainer:hover .blueContainer{
+  opacity: 1;
+}
+.imgContainer:hover .redContainer {
+  opacity: 1;
+}
+.imgContainer:hover .yellowContainer {
+  opacity: 1;
+}
+.imgContainer:hover .greenContainer {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .image{
+    width: 200px;
+    height: 304px;
+  }
+  .linkedin{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .department{
+    font-size: 36px;
+  }
 }
