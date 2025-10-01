@@ -2,7 +2,7 @@ import './Profile.css';
 import React, { useState, useContext} from 'react';
 import Camera from './Profile-assets/camera.svg';
 import { useUser } from '../../context/UserContext';
-
+import AnimationBackground from '../AnimationBackground/AnimationBackground';
 function Profile({ onClose , isClosing }){
     const { firstName, 
             lastName, 
@@ -40,9 +40,8 @@ function Profile({ onClose , isClosing }){
             }}
         >
             <div className="profile-container" onClick={(e) => e.stopPropagation()}>
-                <div className="profile-bg-clip">
-                    <div className="profile-bg-abstract"></div>
-                </div>
+                <AnimationBackground />
+                
                 <button className='ph--triangle-fill' onClick={handleExit}></button>
 
                 <div className='logOut profile'>
