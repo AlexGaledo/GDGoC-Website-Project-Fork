@@ -1,17 +1,16 @@
-.container{
+.container {
   margin-left: 32px;
   margin-right: 32px;
 }
 
 .header {
   font-family: "ProductSansBlack", sans-serif;
-  font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   margin-top: 30px;
   text-align: center;
 }
 
-.subtext{
+.subtext {
   font-family: "ProductSans", sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -22,40 +21,35 @@
   margin-top: 5px;
 }
 
-.highlight1{
+.highlight1 {
   color: #4285F4;
 }
 
-.highlight2{
+.highlight2 {
   color: #EA4335;
 }
 
-.highlight3{
+.highlight3 {
   color: #FBBC04;
 }
 
-.highlight4{
+.highlight4 {
   color: #0F9D58;
 }
 
 /* Responsive media */
 
-@media (min-width: 768px) {
-  .header{
-    font-size: 40px;
-  }
-}
 
-@media (min-width: 1200px) {
-  .header{
-    font-size: 48px;
+@media (min-width: 992px) {
+  .header {
+    font-size: 36px;
   }
 
-  .subtext{
+  .subtext {
     font-size: 18px;
   }
 
-  .container{
+  .container {
     margin-left: 184px;
     margin-right: 184px;
   }
