@@ -19,6 +19,8 @@ import Oper from "../../assets/images/team-images/OPERARTIONS DEPARTMENT/operati
 import Innov from "../../assets/images/team-images/INNOVATIONS DEPARTMENT/innovations";
 import HR from "../../assets/images/team-images/HR DEPARTMENT/hr";
 import Finance from "../../assets/images/team-images/FINANCE/finance";
+import Rel from "../../assets/images/team-images/RELATIONS DEPARTMENT/relations";
+import Googlet from "../../assets/images/team-images/GOOGLET/googlet";
 
 function Team(){
   return(
@@ -363,6 +365,14 @@ function Team(){
             </div>
           </a>
           <a href="https://www.linkedin.com/in/amiel-keith-padilla-6684a0381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4`}>
+            <img src={Tech.Padilla} alt="Amiel Keith E. Padilla" className={styles.image}/>
+            <div className={styles.blueContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="https://www.linkedin.com/in/amiel-keith-padilla-6684a0381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" className={`${styles.imgContainer} col-6 d-md-none`}>
             <img src={Tech.Padilla} alt="Amiel Keith E. Padilla" className={styles.image}/>
             <div className={styles.blueContainer}>
               <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
@@ -875,7 +885,307 @@ function Team(){
         </div>
       </div>
       
-      
+      {/* Relations Department */}
+      <DeptHeader 
+       header='Relations Department'
+       subtext={
+        <>
+          The Relations department manages <span className={deptStyles.highlight1}>collaborative activities</span> within the <span className={deptStyles.highlight2}>organization</span>, while also <span className={deptStyles.highlight3}>handling external relations</span>, specifically <span className={deptStyles.highlight4}>coordinating partnerships</span> with organizations, universities, non-governmental organizations, and government agencies.
+        </>
+       }
+      />
+      <div className=" d-flex flex-column align-items-center justify-content-center m-2 mb-5">
+        <div className="row g-3 ">
+          <a href="https://www.linkedin.com/in/thea-delda-31b89732a" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 col-lg-3`}>
+            <img src={Rel.Delda} alt="Thea Delda" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/dwynescott/" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 col-lg-3`}>
+            <img src={Rel.Japay} alt="Dwyne Scott Japay" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/gvan-antoni-rocas-716a69355" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 col-lg-3`}>
+            <img src={Rel.Rocas} alt="Gvan Antoni Rocas" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="" target="_blank" className={`${styles.imgContainer} d-none d-lg-flex col-lg-3`}>
+            <img src={Rel.Azores} alt="Eunice Juliana Azores" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2 d-lg-none">
+          <a href="https://www.linkedin.com/in/gvan-antoni-rocas-716a69355" target="_blank" className={`${styles.imgContainer} col-6 d-md-none`}>
+            <img src={Rel.Rocas} alt="Gvan Antoni Rocas" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 d-lg-none`}>
+            <img src={Rel.Azores} alt="Eunice Juliana Azores" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/joana-daniel-albaladejo-b23a5422a/" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 d-lg-none`}>
+            <img src={Rel.Albaladejo} alt="Joana Daniel Albaladejo" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/sophia-lorraine-banting-273748381/" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 d-lg-none`}>
+            <img src={Rel.Banting} alt="Sophia Lorraine Banting" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="https://www.linkedin.com/in/joana-daniel-albaladejo-b23a5422a/" target="_blank" className={`${styles.imgContainer} col-6 d-md-none d-lg-flex col-lg-3`}>
+            <img src={Rel.Albaladejo} alt="Joana Daniel Albaladejo" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/sophia-lorraine-banting-273748381/" target="_blank" className={`${styles.imgContainer} col-6 d-md-none d-lg-flex col-lg-3`}>
+            <img src={Rel.Banting} alt="Sophia Lorraine Banting" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/alltessa-jane-rosimo-a94bba381" target="_blank" className={`${styles.imgContainer} d-none d-lg-flex col-lg-3`}>
+            <img src={Rel.Rosimo} alt="Altessa Jane Rosimo" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/maxime-salamat-4650522b4" target="_blank" className={`${styles.imgContainer} d-none d-lg-flex col-lg-3`}>
+            <img src={Rel.Salamat} alt="Maxime Salamat" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="https://www.linkedin.com/in/alltessa-jane-rosimo-a94bba381" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 d-lg-none`}>
+            <img src={Rel.Rosimo} alt="Altessa Jane Rosimo" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/maxime-salamat-4650522b4" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 d-lg-none`}>
+            <img src={Rel.Salamat} alt="Maxime Salamat" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/jannah-kate-catoy-b81011373" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 d-lg-none`}>
+            <img src={Rel.Catoy} alt="Jannah Kate Catoy" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="https://www.linkedin.com/in/jannah-kate-catoy-b81011373" target="_blank" className={`${styles.imgContainer} col-6 d-md-none d-lg-flex col-lg-3`}>
+            <img src={Rel.Catoy} alt="Jannah Kate Catoy" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/andrian-veliganio-3b9813381" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 col-lg-3`}>
+            <img src={Rel.Veliganio} alt="Andrian Veliganio" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 col-lg-3`}>
+            <img src={Rel.Videl} alt="Antonio Videl" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/camillealvarez17/" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 col-lg-3`}>
+            <img src={Rel.Alvarez} alt="Aiza Camille Alvarez" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2 d-md-none">
+          <a href="" target="_blank" className={`${styles.imgContainer} col-6 d-md-none`}>
+            <img src={Rel.Videl} alt="Antonio Videl" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/camillealvarez17/" target="_blank" className={`${styles.imgContainer} col-6 d-md-none`}>
+            <img src={Rel.Alvarez} alt="Aiza Camille Alvarez" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="https://www.linkedin.com/in/rouise-nicole-yumul-13bb62381/" target="_blank" className={`${styles.imgContainer} col-6 col-md-4`}>
+            <img src={Rel.Yumul} alt="Rouise Nicole Yumul" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/mikylla-tabamo-49a526338/" target="_blank" className={`${styles.imgContainer} col-6 col-md-4`}>
+            <img src={Rel.Tabamo} alt="Jan Mikylla Tabamo" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/dionne-margaret-vito-595a06383/" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4`}>
+            <img src={Rel.Vito} alt="Dionne Margaret Vito" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="https://www.linkedin.com/in/dionne-margaret-vito-595a06383/" target="_blank" className={`${styles.imgContainer} col-6 d-md-none`}>
+            <img src={Rel.Vito} alt="Dionne Margaret Vito" className={styles.image}/>
+            <div className={styles.yellowContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+      </div>
+
+      {/* Googlet Department */}
+      <DeptHeader 
+        header='Googlet Department'
+        subtext={
+          <>
+            The Googlet Department meticulously <span className={deptStyles.highlight1}>plans</span> and <span className={deptStyles.highlight2}>executes</span> the creation of our <span className={deptStyles.highlight3}>organization's merchandise</span>, ensuring <span className={deptStyles.highlight4}>high-quality products</span> aligned with our brand identity to drive revenue and enhance our image.
+          </>
+        }
+      />
+      <div className=" d-flex flex-column align-items-center justify-content-center m-2 mb-5">
+        <div className="row g-3 ">
+          <a href="https://www.linkedin.com/in/carla-mae-cardano-57a148296" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 col-lg-3`}>
+            <img src={Googlet.Cardano} alt="Carla Mae S. Cardano" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/charlotenano/" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 col-lg-3`}>
+            <img src={Googlet.Nano} alt="Lady Charlote A. Nano" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/denisse-heart-tero-865662357" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 col-lg-3`}>
+            <img src={Googlet.Tero} alt="Denisse Heart H. Tero" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/toni-ahn-narra-703421299" target="_blank" className={`${styles.imgContainer} d-none d-lg-flex col-lg-3`}>
+            <img src={Googlet.Narra} alt="Toni Ahn B. Narra" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2 d-lg-none">
+          <a href="https://www.linkedin.com/in/denisse-heart-tero-865662357" target="_blank" className={`${styles.imgContainer} col-6 d-md-none`}>
+            <img src={Googlet.Tero} alt="Denisse Heart H. Tero" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/toni-ahn-narra-703421299" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 d-lg-none`}>
+            <img src={Googlet.Narra} alt="Toni Ahn B. Narra" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 d-lg-none`}>
+            <img src={Googlet.Ali} alt="Jasmine D. Ali" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 d-lg-none`}>
+            <img src={Googlet.Recto} alt="Pia Loraine B. Recto" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="" target="_blank" className={`${styles.imgContainer} col-6 d-md-none d-lg-flex col-lg-3`}>
+            <img src={Googlet.Ali} alt="Jasmine D. Ali" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="" target="_blank" className={`${styles.imgContainer} col-6 d-md-none d-lg-flex col-lg-3`}>
+            <img src={Googlet.Recto} alt="Pia Loraine B. Recto" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/jovielyneguillos3877" target="_blank" className={`${styles.imgContainer} d-none d-lg-flex col-lg-3`}>
+            <img src={Googlet.Eguillos} alt="Jovelyn N. Eguillos" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/samantha-michelle-tumala-9ab0b8382" target="_blank" className={`${styles.imgContainer} d-none d-lg-flex col-lg-3`}>
+            <img src={Googlet.Tumala} alt="Samantha Michelle G. Tumala" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="https://www.linkedin.com/in/jovielyneguillos3877" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 d-lg-none`}>
+            <img src={Googlet.Eguillos} alt="Jovelyn N. Eguillos" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/samantha-michelle-tumala-9ab0b8382" target="_blank" className={`${styles.imgContainer} col-6 col-md-4 d-lg-none`}>
+            <img src={Googlet.Tumala} alt="Samantha Michelle G. Tumala" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/jaymie-aquino-243111382" target="_blank" className={`${styles.imgContainer} d-none d-md-flex col-md-4 d-lg-none`}>
+            <img src={Googlet.Aquino} alt="Jaymie Lee C. Aquino" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+        <div className="row g-3 mt-2">
+          <a href="https://www.linkedin.com/in/jaymie-aquino-243111382" target="_blank" className={`${styles.imgContainer} col-6 d-md-none d-lg-flex col-lg-6`}>
+            <img src={Googlet.Aquino} alt="Jaymie Lee C. Aquino" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/ryu-narawa-6b11b1372" target="_blank" className={`${styles.imgContainer} col-6 col-md-12 col-lg-6`}>
+            <img src={Googlet.Narawa} alt="Ryu A. Narawa" className={styles.image}/>
+            <div className={styles.greenContainer}>
+              <img src={EB.LinkedIn} alt="LinkedIn logo" className={styles.linkedin} />
+            </div>
+          </a>
+        </div>
+      </div>
       <Footer />
     </div>
   );
