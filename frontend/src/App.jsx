@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
+import ScrollToTop from './components/ScrollToTop.js';
 
 import "./index.css"; 
 
@@ -11,6 +12,7 @@ function App() {
   return(
     <UserProvider>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route index path='/' element={<Home />} />
           <Route path='/project' element={<Project />} />
