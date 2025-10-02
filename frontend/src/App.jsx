@@ -5,7 +5,7 @@ import "./index.css";
 
 import Home from './pages/home/Home.jsx';
 import Team from './pages/team-page/Team.jsx';
-import Project from './pages/project-page/Project';
+import Project from './pages/project-page/Project.jsx';
 
 function App() {
   return(

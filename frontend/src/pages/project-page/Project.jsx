@@ -11,12 +11,15 @@ import stayTunedMobile from "../../assets/images/project-images/stay-tuned-mobil
 import stayTunedTablet from "../../assets/images/project-images/stay-tuned-tablet.svg";
 import stayTunedDesktop from "../../assets/images/project-images/stay-tuned-desktop.svg";
 
-//Profile
-import Profile from "../../components/Profile/Profile";
+//Animation Background
+import AnimationBackground from "../../components/AnimationBackground/AnimationBackground";
+
+
 
 function Project(){
   return(
     <div className="d-flex flex-column align-items-center justify-content-center">
+      <AnimationBackground />
       <Navbar />
       
       <HeroText 
