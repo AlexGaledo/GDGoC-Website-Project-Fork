@@ -3,9 +3,8 @@ import styles from './Navbar.module.css';
 import logo from '../../assets/images/GDGOC logo.svg';
 import hamburgerBar from '../../assets/images/Hamburger-bar.svg';
 import Profile from '../Profile/Profile';
-import React, { useState } from 'react';
 import { useUser } from '../../context/UserContext';
-
+import React, { useState, useEffect } from 'react';
 
 function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
@@ -21,8 +20,16 @@ function Navbar() {
     }, 300); 
   };
 
-  
-  
+  // for restoring scroll when sections are clicked in the sidebar
+  const handleNavClick = () => {
+    // restore scroll
+    document.body.style.overflow = "auto";
+
+    // reset unwanted padding/margin
+    document.body.style.paddingRight = "0px";
+    document.body.style.paddingLeft = "0px";
+  };
+
   return (
     <>
       {/* Navigation Bar */}
@@ -93,8 +100,8 @@ function Navbar() {
             </svg>
           </button>
           <div className='logOut'>
-            <span class="logoutText"></span> 
-            <span class="logoutIcon"></span>
+            <span className="logoutText"></span> 
+            <span className="logoutIcon"></span>
           </div>
         </div>
         {/* Sidebar sections */}
@@ -113,7 +120,7 @@ function Navbar() {
 
           {/* Other Sections */}
             <div className={`${styles.otherSection} d-flex flex-column gap-5 align-items-center`}>
-              <a href="#" className={styles.home}>Home</a>
+              <Link to='/' className={styles.home} onClick={handleNavClick}>Home</Link>
               <a href="#" className={styles.events}>Events
                 <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -122,8 +129,8 @@ function Navbar() {
                   />
                 </svg>
               </a>
-              <a href="#" className={styles.project}>Project</a>
-              <a href="#" className={styles.team}>Team</a>
+              <Link to='/project' className={styles.project} onClick={handleNavClick}>Project</Link>
+              <Link to='/team' className={styles.team} onClick={handleNavClick}>Team</Link>
               <button className={styles.joinButton}>JOIN US</button>
             </div>
           </div>
