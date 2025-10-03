@@ -1,8 +1,8 @@
 import React from "react";
 import "./Discover.css";
-import Navbar from "../../components/navigation-bar/Navbar";
+import Navbar from "../../components/navigation-bar/Navbar.jsx";
 import Footer from "../../components/footer-section/Footer";
-
+import { useNavigate } from "react-router-dom";
 
 /* images */
 import whoWeAre from "../../assets/home-images/who_we_are.png";
@@ -16,18 +16,19 @@ import asset_2_5 from "../../assets/home-images/asset_2_5.png";
 import asset_3_6 from "../../assets/home-images/asset_3_6.png";
 import asset_4_7 from "../../assets/home-images/asset_4_7.png";
 
-export default function Content() {
+export default function Discover() {
   return (
     <section className="content">
       <Navbar />
+
+      {/* Only ONE set of waves at the top */}
       <div className="waves">
         <img src={asset_1} alt="wave 1" />
         <img src={asset_2_5} alt="wave 2" />
         <img src={asset_3_6} alt="wave 3" />
         <img src={asset_4_7} alt="wave 4" />
         <img src={asset_2_5} alt="wave 5" />
-        <img src={asset_3_6} alt="wave 6" />
-        <img src={asset_4_7} alt="wave 7" />
+        <img src={asset_3_6} alt="wave 3" />
       </div>
 
       {/* Overlay content */}
@@ -38,7 +39,7 @@ export default function Content() {
             <img src={whoWeAre} alt="Who We Are" />
           </div>
           <div className="content-text">
-            <h1>Who we are</h1> <br/>
+            <h1>Who we are</h1> <br />
             <h2>
               Student Leaders driven by{" "}
               <span className="highlight red">Passion</span>
@@ -52,7 +53,7 @@ export default function Content() {
               developer resources and work together to build solutions for local
               problems in a peer-to-peer learning environment.
             </p>
-            <button className="btn-primary">Meet the Team</button>   {/*mapapalitan lahat ng primary button huhu adjust mo na lang*/}
+            <button className="btn-primary">Meet the Team</button>
           </div>
         </section>
 
@@ -62,11 +63,11 @@ export default function Content() {
             <img src={whatWeDo} alt="What We Do" />
           </div>
           <div className="content-text">
-            <h1>What we do</h1> <br/>
+            <h1>What we do</h1> <br />
             <h2>
               Build projects together with{" "}
               <span className="highlight yellow">Junior Googlers!</span>
-            </h2> 
+            </h2>
             <p>
               We bridge the gap between theory and practice. We encourage
               passionate students to build projects that are relevant to solve
@@ -82,14 +83,15 @@ export default function Content() {
             <img src={whatYoullGet} alt="What You'll Get" />
           </div>
           <div className="content-text">
-            <h1>What you’ll get</h1> <br/>
-            <h2>Learn more about Google Technologies!<br/>
+            <h1>What you’ll get</h1> <br />
+            <h2>
+              Learn more about Google Technologies!<br />
               <span className="highlight red">Flutter</span>{" "}
               <span className="highlight blue">Android</span>{" "}
               <span className="highlight green">Tensorflow</span>{" "}
               <span className="highlight yellow">Google Cloud</span> and{" "}
               <span className="highlight red">Firebase</span>.
-            </h2> 
+            </h2>
             <p>
               These are just one of the Technologies we're excited about. Grab
               the opportunity and challenge yourself to build real-life
@@ -105,7 +107,7 @@ export default function Content() {
             <img src={faqs} alt="FAQs" />
           </div>
           <div className="content-text">
-            <h1>FAQs</h1> <br/>
+            <h1>FAQs</h1> <br />
             <p>
               <span className="faq-question">Is there a Membership Fee?</span>
             </p>
@@ -135,6 +137,7 @@ export default function Content() {
           </div>
         </section>
       </div>
+
       <Footer />
     </section>
   );

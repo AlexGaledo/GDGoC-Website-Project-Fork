@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Home.css";
 import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
+import { useNavigate } from "react-router-dom";
 
 /* slide defaults */
 import slide_default_1 from "../../assets/home-images/slide_default_1.png";
@@ -43,6 +44,8 @@ export default function Slideshow() {
   const [isDatacampHover, setIsDatacampHover] = useState(false);
   const [isGithubHover, setIsGithubHover] = useState(false);
 
+  const navigate = useNavigate(); 
+
   const goPrev = () => setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1));
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
@@ -81,7 +84,12 @@ export default function Slideshow() {
           </span>
         </p> <br/>
 
-          <button className="btn-primary">Discover GDSC</button>
+         <button 
+            className="btn-primary" 
+            onClick={() => navigate("/discover")}
+          >
+           Discover GDSC
+          </button>
       </div>
 
       <div>  
