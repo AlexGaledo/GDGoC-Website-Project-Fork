@@ -4,6 +4,7 @@ import styles from "../project-card/ProjectCard.module.css";
 function ProjectCard({image, title, description, designer, developer}){
   return(
     <>
+      
       {/* Mobile design */}
       <div className={`${styles.card} d-flex flex-column align-items-center d-md-none`}>
         <img src={image} alt={title} className={styles.projectImage}/>

@@ -7,6 +7,9 @@ import Home from './pages/home/Home.jsx';
 import Team from './pages/team-page/Team.jsx';
 import Project from './pages/project-page/Project.jsx';
 
+import ChangePassword from './components/ChangePassword/ChangePassword.jsx';
+import LogIn from './components/LogIn/LogIn.jsx';
+
 function App() {
   return(
     <UserProvider>
