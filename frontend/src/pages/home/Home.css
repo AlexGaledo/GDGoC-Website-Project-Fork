@@ -72,13 +72,16 @@
 .btn-primary {
   display: inline-block;
   font-family: 'Product Sans Medium', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   background: #EA4335;
   color: #F3F4F6;
   padding: 13px 55px;
+  width: 230px;
+  height: 50px;
   border-radius: 12px;
   border: 1.5px solid #EA4335;
   transition: 0.5s;
+  gap:100px;
 }
 
 .btn-primary:hover {

@@ -88,7 +88,7 @@ export default function Slideshow() {
             className="btn-primary" 
             onClick={() => navigate("/discover")}
           >
-           Discover GDSC
+           Discover GDGoC
           </button>
       </div>
 
