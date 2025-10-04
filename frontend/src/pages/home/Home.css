@@ -11,6 +11,13 @@
   overflow: hidden; 
 }
 
+.slideshow-container .animation-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .slide {
   flex: 0 0 100%; 
   height: 600px;
@@ -45,8 +52,14 @@
   z-index: 2;
   width: 100%;
   max-width: 900px;
-  font-family: 'Product Sans Light', sans-serif;
+  font-family: "ProductSansBold", sans-serif; 
   font-size:20px;
+}
+
+.overlay p{
+  font-family: "ProductLight", sans-serif !important; 
+  font-size:18px !important;
+  opacity:0.7;
 }
 
 .google {
@@ -76,8 +89,6 @@
   background: #EA4335;
   color: #F3F4F6;
   padding: 13px 55px;
-  width: 230px;
-  height: 50px;
   border-radius: 12px;
   border: 1.5px solid #EA4335;
   transition: 0.5s;
@@ -131,8 +142,9 @@
 .arrow-btn::before {
   content: "";
   position: absolute;
-  height: 1000px;  
+  height: 600px; 
   width: 200px;
+  margin-top:29px;
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1;
@@ -223,6 +235,7 @@
   .overlay h1 {
     font-size: 28px;
     line-height: 1.3;
+    font-weight:900;
   }
 
   .overlay p {
@@ -247,6 +260,7 @@
 
   .overlay h1 {
     font-size: 36px;
+    font-weight:900;
   }
 
   .overlay p {
@@ -276,6 +290,7 @@
 
   .overlay h1 {
     font-size: 45px;
+    font-weight:900;
   }
 
   .overlay p {

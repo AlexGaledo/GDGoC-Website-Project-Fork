@@ -3,6 +3,8 @@ import "./Home.css";
 import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
 import { useNavigate } from "react-router-dom";
+import AnimationBackground from "../../components/AnimationBackground/AnimationBackground";
+
 
 /* slide defaults */
 import slide_default_1 from "../../assets/home-images/slide_default_1.png";
@@ -53,15 +55,16 @@ export default function Slideshow() {
   return (
    <section className="slideshow-wrap">
     <Navbar />
+    
       <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
         {slides.map((slide, index) => (
           <div
             className="slide"
             key={index}
             style={{ backgroundImage: `url(${slide})` }}
-          />
-        ))}
-      </div>
+          /> 
+        ))} <AnimationBackground />
+      </div> 
 
 
       <div className="overlay">

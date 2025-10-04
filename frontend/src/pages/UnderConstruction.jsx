@@ -1,9 +1,15 @@
 import React from "react";
+import Navbar from "../components/navigation-bar/Navbar";
+import Footer from "../components/footer-section/Footer";
+import { useNavigate } from "react-router-dom";
 import "./Pages.css"; 
 import { assets } from "../assets/assets";
 
 const UnderConstruction = () => {
+  const navigate = useNavigate(); 
   return (
+     <>
+     <Navbar />
     <div className="status-page">
       {/* Left Section */}
       <div className="content-text">
@@ -14,7 +20,11 @@ const UnderConstruction = () => {
           process. Kindly excuse and temporary disarray as we are actively <br/>
           working to bring our vision to fruition. <br/>
         </p><br/>
-        <button className="btn-primary">Return to Homepage</button>
+        <button 
+            className="btn-primary" 
+            onClick={() => navigate("/")}>
+           Return to Homepage
+         </button>
       </div>
 
       {/* Right Section */}
@@ -22,6 +32,8 @@ const UnderConstruction = () => {
         <img src={assets.construction_on_site} alt="Construction on Site" />
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
