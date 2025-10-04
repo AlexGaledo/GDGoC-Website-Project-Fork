@@ -34,7 +34,7 @@ const slides = [
   slide_default_10,
 ];
 
-export default function Slideshow() {
+export default function Home() {
   const [current, setCurrent] = useState(0);
 
   const [isPrevHover, setIsPrevHover] = useState(false);
