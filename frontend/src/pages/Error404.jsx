@@ -1,9 +1,15 @@
 import React from "react";
+import Navbar from "../components/navigation-bar/Navbar";
+import Footer from "../components/footer-section/Footer";
+import { useNavigate } from "react-router-dom";
 import "./Pages.css"; 
 import { assets } from "../assets/assets.js"; 
 
 const Error404 = () => {
+  const navigate = useNavigate(); 
   return (
+    <>
+    <Navbar />
     <div className="status-page">
       {/* Left Section */}
       <div className="content-text">
@@ -14,7 +20,11 @@ const Error404 = () => {
           of the issue. In the interim, we recommend taking a moment to reset by <br/>
           navigating to our homepage and commencing anew.
         </p><br/>
-        <button className="btn-primary">Return to Homepage</button>
+        <button 
+            className="btn-primary" 
+            onClick={() => navigate("/")}>
+           Return to Homepage
+         </button>
       </div>
 
       {/* Right Section */}
@@ -22,6 +32,8 @@ const Error404 = () => {
         <img src={assets.error404} alt="404 Error" />
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

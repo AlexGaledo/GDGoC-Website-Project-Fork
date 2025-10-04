@@ -23,7 +23,7 @@
 
 .status-right img {
   max-width: 350px;
-  width:350px;
+  width: 100%;
   height: auto;
 }
 
@@ -34,9 +34,9 @@
   margin-bottom: 16px;
 }
 
-
 /* Membership Page */
 .membership-page {
+  display: flex;
   flex-direction: column;
   text-align: center;
   padding: 60px 10%;
@@ -59,28 +59,86 @@
   text-transform: uppercase;
 }
 
-.membership p{
+.membership p {
   max-width: 700px;
   margin: 0 auto;       
   text-align: center;     
   font-family: 'Product Sans Medium', sans-serif;
-  opacity:0.6;          
+  opacity: 0.6;          
   line-height: 1.6;
   font-size: 16px;
 }
 
+@media (max-width: 1024px) {
+  .status-page {
+    padding: 50px 8%;
+    gap: 1.5rem;
+  }
+
+  .footerTitle {
+    font-size: 28px;
+  }
+
+  .membershipTitle {
+    font-size: 32px;
+  }
+
+  .status-right img {
+    max-width: 320px;
+  }
+}
+
 @media (max-width: 768px) {
-.status-page {
-  flex-direction: column;
-  text-align: center;
-  padding: 40px 5%;
+  .status-page {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .content-text {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .status-right {
+    flex: 1 1 100%;
+    margin-top: 2rem;
+  }
+
+  .status-right img {
+    max-width: 280px;
+  }
+
+  .footerTitle {
+    font-size: 24px;
+  }
+
+  .membershipTitle {
+    font-size: 28px;
+  }
 }
 
-.status-right {
-  margin-top: 2rem;
-}
+@media (max-width: 480px) {
+  .status-page {
+    padding: 30px 4%;
+    gap: 1rem;
+  }
 
-.status-right img {
-  max-width: 300px;
-}
+  .footerTitle {
+    font-size: 20px;
+  }
+
+  .membershipTitle {
+    font-size: 24px;
+  }
+
+  .membership p {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .status-right img {
+    max-width: 220px;
+  }
 }

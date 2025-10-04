@@ -1,8 +1,10 @@
 import styles from "../footer-section/Footer.module.css";
 import logo from "../../assets/images/GDGOC logo.svg";
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function Footer(){
+  const navigate = useNavigate();
   return(
     <div className={styles.mainContainer}>
       <div className={`${styles.footerContainer} d-flex flex-column align-items-center flex-md-row justify-content-between`}>
@@ -10,8 +12,14 @@ function Footer(){
           <h1 className={styles.footerTitle}>Let's connect!</h1>
             <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Want to be part of our community? Have something in mind?</h3>
             <div className={`${styles.buttonSection} d-flex flex-row justify-content-center align-items-center gap-3`}>
-              <button className={styles.btnprimary}>Join us!</button>
-              <button className={styles.btnsecondary}>Message us!</button>
+              <button className={styles.btnprimary} 
+                onClick={() => navigate("/MembershipClosed")}>
+                Join us!
+              </button>
+              <button className={styles.btnsecondary} 
+                onClick={() => navigate("/UnderConstruction")}>
+                Message us!
+              </button>
             </div>
         </div>
         <div className="d-flex flex-column align-items-center align-items-md-start">
