@@ -100,5 +100,5 @@ export const assets = {
   faqs,
   construction_on_site,
   error404,
-  membership_drive
+  membership_drive,
 };
