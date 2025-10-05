@@ -10,106 +10,97 @@ import whatWeDo from "../../assets/home-images/what_we_do.png";
 import whatYoullGet from "../../assets/home-images/what_youll_get.png";
 import faqs from "../../assets/home-images/faqs.png";
 
-
-/* wave assets */
+/* wave assets*/
 import asset_1 from "../../assets/home-images/asset_1.png";
 import asset_2_5 from "../../assets/home-images/asset_2_5.png";
 import asset_3_6 from "../../assets/home-images/asset_3_6.png";
 import asset_4_7 from "../../assets/home-images/asset_4_7.png";
 
 export default function Discover() {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
   return (
     <section className="content">
-    <Navbar />
+      <Navbar />
 
-      {/* Only ONE set of waves at the top */}
       <div className="waves">
         <img src={asset_1} alt="wave 1" />
         <img src={asset_2_5} alt="wave 2" />
         <img src={asset_3_6} alt="wave 3" />
         <img src={asset_4_7} alt="wave 4" />
         <img src={asset_2_5} alt="wave 5" />
-        <img src={asset_3_6} alt="wave 3" />
+        <img src={asset_3_6} alt="wave 6" />
       </div>
 
-      {/* Overlay content */}
       <div className="content-overlay">
-        {/* Who we are */}
-        <section className="content-block reverse">
-          <div className="content-image">
-            <img src={whoWeAre} alt="Who We Are" />
-          </div>
-          <div className="content-text">
-            <h1>Who we are</h1> <br />
-            <h2>
+
+        {/* WHO WE ARE*/}
+        <section className="content-grid">
+          <h1>Who we are</h1>
+          <h2>
               Student Leaders driven by{" "}
               <span className="highlight red">Passion</span>
-            </h2>
+           </h2>
+          <img src={whoWeAre} alt="Who We Are" />
+          <div className="content-body">
             <p>
-              Google Developer Groups on Campus - Technological University of
-              the Philippines - Manila is a community of students from any
-              academic undergraduate background that aims to build student's
-              professional and personal network in technology, specifically
-              software engineering, and at the same time get access to Google
-              developer resources and work together to build solutions for local
-              problems in a peer-to-peer learning environment.
-            </p> <br/>
-            <button 
-             className="btn-primary" 
-             onClick={() => navigate("/team")} 
-            >
+              Google Developer Groups on Campus - Technological University of the Philippines 
+              - Manila is a community of students from any academic undergraduate background 
+              that aims to build professional and personal networks in technology, 
+              specifically software engineering, and at the same time get access to Google
+              developer resources and work together to build solutions for local problems in a 
+              peer-to-peer learning environment.
+            </p>
+          </div>
+          <div>
+            <button className="btn-primary" onClick={() => navigate("/team")}>
               Meet the Team
             </button>
           </div>
         </section>
 
-        {/* What we do */}
-        <section className="content-block">
-          <div className="content-image">
-            <img src={whatWeDo} alt="What We Do" />
-          </div>
-          <div className="content-text">
-            <h1>What we do</h1> <br />
-            <h2>
+        {/* WHAT WE DO */}
+        <section className="content-grid reverse">
+          <h1>What we do</h1>
+          <h2>
               Build projects together with{" "}
               <span className="highlight yellow">Junior Googlers!</span>
-            </h2>
+          </h2>
+          <img src={whatWeDo} alt="What We Do" />
+          <div className="content-body">
             <p>
               We bridge the gap between theory and practice. We encourage
               passionate students to build projects that are relevant to solve
-              problems in our community.<br/><br/>
-              Head on Projects to see what we're currently working on! 
-            </p> <br/>
-            <button 
-              className="btn-primary"
-              onClick={() => navigate("/project")} 
-            >
+              problems in our community.
+            </p>
+          </div>
+          <div>
+            <button className="btn-primary" onClick={() => navigate("/project")}>
               Projects
             </button>
           </div>
         </section>
 
-        {/* What you'll get */}
-        <section className="content-block reverse">
-          <div className="content-image">
-            <img src={whatYoullGet} alt="What You'll Get" />
-          </div>
-          <div className="content-text">
-            <h1>What you’ll get</h1> <br />
-            <h2>
-              Learn more about Google Technologies!<br />
+        {/* WHAT YOU'LL GET */}
+        <section className="content-grid">
+          <h1>What you'll get</h1>
+           <h2>
+              Learn more about Google <br/>Technologies!{" "}
               <span className="highlight red">Flutter</span>{" "}
-              <span className="highlight blue">Android</span>{" "}
-              <span className="highlight green">Tensorflow</span>{" "}
-              <span className="highlight yellow">Google Cloud</span> and{" "}
+              <span className="highlight blue">Android,</span>{" "}<br/>
+              <span className="highlight green">Tensorflow,</span>{" "}
+              <span className="highlight yellow">Google Cloud,</span> and{" "}
               <span className="highlight red">Firebase</span>.
             </h2>
+          <img src={whatYoullGet} alt="What you'll get" />
+          <div className="content-body">
             <p>
               These are just one of the Technologies we're excited about. Grab
               the opportunity and challenge yourself to build real-life
               applications that solve problems within our community.
-            </p> <br/>
+            </p>
+          </div>
+          <div>
             <button className="btn-primary">
               Codelabs 
                <svg width="16" height="16" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="btn-icon">
@@ -122,43 +113,28 @@ export default function Discover() {
           </div>
         </section>
 
-        {/* FAQs */}
-        <section className="content-block">
-          <div className="content-image">
-            <img src={faqs} alt="FAQs" />
-          </div>
-          <div className="content-text">
-            <h1>FAQs</h1> <br />
-            <p>
-              <span className="faq-question">Is there a Membership Fee?</span>
-            </p>
-            <p>
-              Google Developer Groups on Campus is a Student led Non-Profit
+        {/* FAQ */}
+        <section className="content-grid reverse">
+          <h1>FAQ s</h1>
+          <img src={faqs} alt="FAQs" />
+          <div className="content-body">
+            <p> <span className="faq-question">Is there a Membership Fee?</span></p>
+            <p>Google Developer Groups on Campus is a Student led Non-Profit
               Organization. We don't require any membership fees to our aspiring
-              Junior Googlers.
-            </p>
-            <p>
-              <span className="faq-question">
-                Are events held online or hybrid?
-              </span>
-            </p>
-            <p>
-              The events can be held either online or in-person (face to face),
-              depending on the circumstances and preferences.
-            </p>
-            <p>
-              <span className="faq-question">
-                I'm not from TUP Manila, can I still join?
-              </span>
-            </p>
-            <p>
-              Unfortunately, we only accept TUP Manila students as of the
-              moment.
-            </p>
+              Junior Googlers.</p>
+
+            <p><span className="faq-question"> Are events held online or hybrid?</span></p>
+            <p>The events can be held either online or in-person (face to face),
+              depending on the circumstances and preferences.</p>
+
+            <p><span className="faq-question"> I'm not from TUP Manila, can I still join?</span></p>
+            <p>Unfortunately, we only accept TUP Manila students as of the
+              moment.</p>
           </div>
         </section>
-       <hr className="section-divider" />
+      <hr className="section-divider" />
       </div>
+
       <Footer />
     </section>
   );

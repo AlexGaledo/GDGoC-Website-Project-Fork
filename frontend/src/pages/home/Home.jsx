@@ -69,7 +69,7 @@ export default function Slideshow() {
 
       <div className="overlay">
         <h1>
-          Connecting Student Developers <br/> with the Power of{" "}
+          Connecting Student Developers<br/> with the Power of{" "}
           <span className="google">
             <span>G</span>
             <span>o</span>
@@ -78,21 +78,21 @@ export default function Slideshow() {
             <span>l</span>
             <span>e</span>
           </span> {" "} Technologies
-        </h1> <br/>
+        </h1> 
 
         <p>
-          The official Google Developer Groups on Campus at <br />
-          <span className="tup">
+          The official Google Developer Groups on Campus at 
+          <span className="tup"> <br/>
             Technological University of the Philippines - Manila
           </span>
-        </p> <br/>
+        </p> 
 
          <button 
             className="btn-primary" 
             onClick={() => navigate("/discover")}
-          >
+         >
            Discover GDGoC
-          </button>
+        </button>
       </div>
 
       <div>  

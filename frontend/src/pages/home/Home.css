@@ -84,7 +84,7 @@
 
 .btn-primary {
   display: inline-block;
-  font-family: 'Product Sans Medium', sans-serif;
+  font-family: "ProductSansMedium", sans-serif; 
   font-size: 18px;
   background: #EA4335;
   color: #F3F4F6;
@@ -207,7 +207,8 @@
 .sponsors {
   display: flex;
   justify-content: center;
-  gap: 90px;
+  gap: 50px;
+  flex-wrap: wrap;   
   padding: 35px 0;
   background: #f3f4f6;
   width: 100vw;    
@@ -226,10 +227,21 @@
   height: 400px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .slideshow-track,
   .slide {
     height: 500px;
+  }
+
+  .arrow-btn {
+    top: 50%;
+    width: 70px; /* smaller clickable area */
+  }
+
+
+  .overlay {
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .overlay h1 {
@@ -258,6 +270,16 @@
     height: 600px;
   }
 
+  .arrow-btn {
+    top: 48%;
+    width: 90px;  /* slightly smaller */
+  }
+
+  .overlay {
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+
   .overlay h1 {
     font-size: 36px;
     font-weight:900;
@@ -283,9 +305,14 @@
     height: 600px;
   }
 
+  .arrow-btn {
+    top: 48%;
+    width: 90px;  /* slightly smaller */
+  }
+  
   .overlay {
-    top: 70%; 
-    max-width: 1000px;
+    top: 60%;
+    transform: translate(-50%, -50%);
   }
 
   .overlay h1 {

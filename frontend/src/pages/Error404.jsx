@@ -11,9 +11,13 @@ const Error404 = () => {
     <>
     <Navbar />
     <div className="status-page">
+      {/* Right Section */}
+      <div className="status-right">
+        <img src={assets.error404} alt="404 Error" />
+      </div>
       {/* Left Section */}
       <div className="content-text">
-        <h1 className="footerTitle">Oops! Page not found</h1>
+        <h1>Oops! Page not found</h1>
         <p>
           It appears that you have deviated from the established route. <br />
           Our servers are currently undergoing analysis to ascertain the root cause <br/>
@@ -25,11 +29,6 @@ const Error404 = () => {
             onClick={() => navigate("/")}>
            Return to Homepage
          </button>
-      </div>
-
-      {/* Right Section */}
-      <div className="status-right">
-        <img src={assets.error404} alt="404 Error" />
       </div>
     </div>
     <Footer />

@@ -11,9 +11,13 @@ const UnderConstruction = () => {
      <>
      <Navbar />
     <div className="status-page">
+      {/* Right Section */}
+      <div className="status-right">
+        <img src={assets.construction_on_site} alt="Construction on Site" />
+      </div>
       {/* Left Section */}
       <div className="content-text">
-        <h1 className="footerTitle">Construction on Site...</h1>
+        <h1>Construction on Site...</h1>
         <p>
           We are currently engaged in the construction of an extraordinary project, <br/>
           and we aske for your understanding as we navigate through the <br/>
@@ -25,11 +29,6 @@ const UnderConstruction = () => {
             onClick={() => navigate("/")}>
            Return to Homepage
          </button>
-      </div>
-
-      {/* Right Section */}
-      <div className="status-right">
-        <img src={assets.construction_on_site} alt="Construction on Site" />
       </div>
     </div>
     <Footer />
