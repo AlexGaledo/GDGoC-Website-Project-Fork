@@ -74,26 +74,3 @@ a{
   text-decoration: none;
   color: inherit; 
 }
-
-@media (max-width: 900px) {
-  .content-block {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .content-block.reverse {
-    flex-direction: column-reverse;
-  }
-
-  .content-image,
-  .content-text {
-    flex-basis: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .content-text {
-    text-align: center;
-  }
-}
