@@ -158,7 +158,12 @@
   opacity: 0.7;
 }
 
-/*TABLET (768px - 1199px)*/
+.footer {
+  position: relative;
+  z-index: 3;
+}
+
+
 @media (min-width: 768px) and (max-width: 1199px) {
   .content-overlay {
     padding: 2rem 2.5rem;
@@ -340,4 +345,9 @@
     width: 90%;
     margin: -5px auto 10px auto;
   }
+
+  .footer {
+  position: relative;
+  z-index: 3;
+}
 }
