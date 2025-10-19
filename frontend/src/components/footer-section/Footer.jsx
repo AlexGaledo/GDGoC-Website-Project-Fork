@@ -1,7 +1,10 @@
 import styles from "../footer-section/Footer.module.css";
 import logo from "../../assets/images/GDGOC logo.svg";
+import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 function Footer(){
+  const navigate = useNavigate();
   return(
     <div className={styles.mainContainer}>
       <div className={`${styles.footerContainer} d-flex flex-column align-items-center flex-md-row justify-content-between`}>
@@ -9,8 +12,14 @@ function Footer(){
           <h1 className={styles.footerTitle}>Let's connect!</h1>
             <h3 className={`${styles.footerSubtext} text-center text-md-start`}>Want to be part of our community? Have something in mind?</h3>
             <div className={`${styles.buttonSection} d-flex flex-row justify-content-center align-items-center gap-3`}>
-              <button className={styles.btnprimary}>Join us!</button>
-              <button className={styles.btnsecondary}>Message us!</button>
+              <button className={styles.btnprimary} 
+                onClick={() => navigate("/MembershipClosed")}>
+                Join us!
+              </button>
+              <button className={styles.btnsecondary} 
+                onClick={() => navigate("/UnderConstruction")}>
+                Message us!
+              </button>
             </div>
         </div>
         <div className="d-flex flex-column align-items-center align-items-md-start">
@@ -96,7 +105,7 @@ function Footer(){
       <div className={`${styles.subFooter} d-flex flex-column align-items-center justify-content-center`}>
         <img src={logo} alt="GDGoC-logo" className={styles.logo} />
         <div className="d-flex flex-column align-items-center flex-md-row gap-4">
-          <a href="#" className={styles.home}>Home</a>
+          <Link to='/' className={styles.home}>Home</Link>
           <a href="#" className={styles.events}>Events
             <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -105,8 +114,8 @@ function Footer(){
               />
             </svg>
           </a>
-        <a href="#" className={styles.project}>Project</a>
-        <a href="#" className={styles.team}>Team</a>
+        <Link to='/project' className={styles.project}>Project</Link>
+        <Link to='/team' className={styles.team}>Team</Link>
         </div>
         <p className={styles.copyright}>&copy; 2025 Google Developer Groups on Campus TUP Manila. <br/> All Rights Reserved.</p>
       </div>

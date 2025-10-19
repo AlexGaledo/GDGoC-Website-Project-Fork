@@ -1,0 +1,56 @@
+.container {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.header {
+  font-family: "ProductSansBlack", sans-serif;
+  font-size: 32px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.subtext {
+  font-family: "ProductSans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  color: #838383;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 5px;
+}
+
+.highlight1 {
+  color: #4285F4;
+}
+
+.highlight2 {
+  color: #EA4335;
+}
+
+.highlight3 {
+  color: #FBBC04;
+}
+
+.highlight4 {
+  color: #0F9D58;
+}
+
+/* Responsive media */
+
+
+@media (min-width: 992px) {
+  .header {
+    font-size: 36px;
+  }
+
+  .subtext {
+    font-size: 18px;
+  }
+
+  .container {
+    margin-left: 184px;
+    margin-right: 184px;
+  }
+}

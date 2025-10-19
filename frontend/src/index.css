@@ -20,6 +20,13 @@
 }
 
 @font-face {
+  font-family: 'ProductSansBold';
+  src: url('./assets/fonts/ProductSans-Bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'ProductSans';
   src: url('./assets/fonts/ProductSans-Regular.ttf') format('truetype');
   font-style: normal;
@@ -66,27 +73,4 @@ body {
 a{
   text-decoration: none;
   color: inherit; 
-}
-
-@media (max-width: 900px) {
-  .content-block {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .content-block.reverse {
-    flex-direction: column-reverse;
-  }
-
-  .content-image,
-  .content-text {
-    flex-basis: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .content-text {
-    text-align: center;
-  }
 }
