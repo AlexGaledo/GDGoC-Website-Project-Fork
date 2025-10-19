@@ -9,7 +9,7 @@ export const UserProvider = ({ children }) => {
     const [firstName, setFirstName] = useState("Firstname");
     const [lastName, setLastName] = useState("Lastname");
     const [username, setUsername] = useState("@username");
-    const [gdgID, setGdgID] = useState(1458);
+    const [gdgID, setGdgID] = useState(null);
     const [expNumber, setExpNumber] = useState(1000);
     const [idPad, setIdPad] = useState("GDGTUP-25-1448");
     

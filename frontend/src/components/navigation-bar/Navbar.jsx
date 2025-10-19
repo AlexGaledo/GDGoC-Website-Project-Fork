@@ -5,11 +5,15 @@ import hamburgerBar from '../../assets/images/Hamburger-bar.svg';
 import Profile from '../Profile/Profile';
 import { useUser } from '../../context/UserContext';
 import React, { useState, useEffect } from 'react';
+import LogIn from '../../pages/LogIn/LogIn';
 
 function Navbar() {
   const [showProfile, setShowProfile] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  const { profilePic } = useUser();
+  const [isLoginClosing, setIsLoginClosing] = useState(false);
+
+  const { profilePic, gdgID } = useUser();
 
 
   const handleClose = () => {
@@ -17,6 +21,14 @@ function Navbar() {
     setTimeout(() => {
       setShowProfile(false); // unmount AFTER animation
       setIsClosing(false);   // reset
+    }, 300); 
+  };
+
+  const handleLoginClose = () => {
+    setIsLoginClosing(true); // trigger exit animation
+    setTimeout(() => {
+      setShowLogin(false); // unmount AFTER animation
+      setIsLoginClosing(false);   // reset
     }, 300); 
   };
 
@@ -54,7 +66,11 @@ function Navbar() {
             <button className={styles.joinButton}>JOIN US</button>
             <button type='button' className={styles.profile}
               onClick={e => {
-                setShowProfile(true);
+                if (gdgID) {
+                  setShowProfile(true);
+                } else {
+                  setShowLogin(true);
+                }
               }}>
               <div
                 className={`${styles.profilePicNavbar} ${profilePic ? styles.hasImage : styles.defaultBg}`}
@@ -109,7 +125,11 @@ function Navbar() {
           <div className='d-flex flex-column align-items-center'>
             <button type='button' className={styles.profile}
               onClick={e => {
-                setShowProfile(true);
+                if (gdgID) {
+                  setShowProfile(true);
+                } else {
+                  setShowLogin(true);
+                }
               }}
             >
               <div
@@ -136,14 +156,22 @@ function Navbar() {
           </div>
         </div>
       </div>
-
       
-      {showProfile && (
+      
+      {showProfile && gdgID?
+        (
           <div className="profile-modal-overlay" onClick={handleClose}>
             <Profile onClose={handleClose} isClosing={isClosing}/>
           </div>
         )
-      }
+        :
+        showLogin && !gdgID &&
+        (
+          <div className="OverlayLogIn" onClick={handleLoginClose}>
+              <LogIn onClose={handleLoginClose} isClosing={isLoginClosing}/>
+          </div>
+        )
+        }
     </>
   );
 }
