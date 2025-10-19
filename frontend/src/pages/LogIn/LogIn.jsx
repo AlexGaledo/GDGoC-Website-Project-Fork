@@ -1,8 +1,10 @@
 import './LogIn.css';
-import AnimationBackground from '../AnimationBackground/AnimationBackground';
+import AnimationBackground from '../../components/AnimationBackground/AnimationBackground';
 
 
 function LogIn() {
+
+    
     return (
         <div className="OverlayLogIn">
             <AnimationBackground />
