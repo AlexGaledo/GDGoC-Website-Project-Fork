@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./Home.css";
 import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
+import { useNavigate } from "react-router-dom";
+import AnimationBackground from "../../components/AnimationBackground/AnimationBackground";
+
 
 /* slide defaults */
 import slide_default_1 from "../../assets/home-images/slide_default_1.png";
@@ -43,6 +46,8 @@ export default function Home() {
   const [isDatacampHover, setIsDatacampHover] = useState(false);
   const [isGithubHover, setIsGithubHover] = useState(false);
 
+  const navigate = useNavigate(); 
+
   const goPrev = () => setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1));
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
@@ -50,20 +55,21 @@ export default function Home() {
   return (
    <section className="slideshow-wrap">
     <Navbar />
+    
       <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
         {slides.map((slide, index) => (
           <div
             className="slide"
             key={index}
             style={{ backgroundImage: `url(${slide})` }}
-          />
-        ))}
-      </div>
+          /> 
+        ))} <AnimationBackground />
+      </div> 
 
 
       <div className="overlay">
         <h1>
-          Connecting Student Developers <br/> with the Power of{" "}
+          Connecting Student Developers<br/> with the Power of{" "}
           <span className="google">
             <span>G</span>
             <span>o</span>
@@ -72,16 +78,21 @@ export default function Home() {
             <span>l</span>
             <span>e</span>
           </span> {" "} Technologies
-        </h1> <br/>
+        </h1> 
 
         <p>
-          The official Google Developer Groups on Campus at <br />
-          <span className="tup">
+          The official Google Developer Groups on Campus at 
+          <span className="tup"> <br/>
             Technological University of the Philippines - Manila
           </span>
-        </p> <br/>
+        </p> 
 
-          <button className="btn-primary">Discover GDSC</button>
+         <button 
+            className="btn-primary" 
+            onClick={() => navigate("/discover")}
+         >
+           Discover GDGoC
+        </button>
       </div>
 
       <div>  
