@@ -8,7 +8,8 @@
 .slideshow-wrap {
   width: 100vw;  
   margin: 0;      
-  overflow: hidden; 
+  overflow: hidden;
+  position: relative; 
 }
 
 .slideshow-container .animation-background {
@@ -17,6 +18,8 @@
   z-index: 1;
   pointer-events: none;
 }
+
+
 
 .slide {
   flex: 0 0 100%; 
@@ -44,12 +47,12 @@
 
 .overlay {
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #111;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   max-width: 900px;
   font-family: "ProductSansBold", sans-serif;
@@ -186,11 +189,10 @@
 }
 
 .dots {
-  position: absolute;
-  bottom: -90px;
   left: 50%;
-  transform: translateX(-50%);
   display: flex;
+  justify-content: center;
+  transform: translateY(-40px);
   gap: 10px;
   z-index: 3;
 }
