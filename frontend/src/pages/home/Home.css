@@ -241,11 +241,11 @@
   }
 
  .arrow-btn{
-    top:26%;
+    top:23%;
   }
 
   .overlay {
-    top: 42%;
+    top: 36%;
   }
 
   .arrow-btn::before {
@@ -271,7 +271,7 @@
   }
 
   .dots {
-    bottom: 310px;
+    bottom: 450px;
   }
 
 }
@@ -284,11 +284,11 @@
   }
 
  .arrow-btn{
-    top:26%;
+    top:23%;
   }
 
  .overlay {
-    top: 46%;
+    top: 40%;
   }
 
   .arrow-btn::before {
@@ -314,7 +314,7 @@
   }
 
   .dots {
-    bottom: 300px;
+    bottom: 450px;
   }
 
 }
@@ -330,7 +330,7 @@
   }
 
  .overlay {
-    top: 45%;
+    top: 43%;
   }
 
   .arrow-btn::before {
@@ -356,7 +356,7 @@
   }
 
   .dots {
-    bottom: 220px;
+    bottom: 350px;
   }
 }
 
@@ -367,11 +367,11 @@
   }
 
   .arrow-btn{
-    top:31.5%;
+    top:28%;
   }
 
  .overlay {
-    top: 50%;
+    top: 46%;
   }
 
   .arrow-btn::before {
@@ -396,7 +396,7 @@
   }
 
   .dots {
-    bottom: 220px;
+    bottom: 350px;
   }
 }
 
@@ -407,11 +407,11 @@
   }
 
   .arrow-btn{
-    top:32%;
+    top:27.5%;
   }
 
  .overlay {
-    top: 50%;
+    top: 45%;
   }
 
   .arrow-btn::before {
@@ -437,7 +437,7 @@
   }
 
  .dots {
-    bottom: 210px;
+    bottom: 350px;
   }
 
 }
