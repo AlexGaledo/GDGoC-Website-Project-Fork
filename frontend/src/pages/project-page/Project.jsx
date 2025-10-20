@@ -20,6 +20,7 @@ function Project(){
   return(
     <div className="d-flex flex-column align-items-center justify-content-center">
       <AnimationBackground />
+
       <Navbar />
       
       <HeroText 
@@ -30,6 +31,7 @@ function Project(){
           </>
         }
       />
+  
       <ProjectCard 
         image = {websiteProjectImg}
         title = "GDGoC TUPM - Official Website"
@@ -46,7 +48,7 @@ function Project(){
       <div className={`${styles.container2} d-none d-xl-flex flex-column align-items-center`}>
         <img src={stayTunedDesktop} alt="stay-tuned" />
       </div>
-      {/* <Profile/> */}
+
       <Footer />
     </div>
   );
