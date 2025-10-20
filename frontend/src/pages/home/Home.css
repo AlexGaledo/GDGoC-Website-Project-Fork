@@ -284,11 +284,11 @@
   }
 
  .arrow-btn{
-    top:33%;
+    top:26%;
   }
 
  .overlay {
-    top: 50%;
+    top: 46%;
   }
 
   .arrow-btn::before {
@@ -314,7 +314,7 @@
   }
 
   .dots {
-    bottom: 180px;
+    bottom: 300px;
   }
 
 }
@@ -356,7 +356,7 @@
   }
 
   .dots {
-    bottom: 350px;
+    bottom: 220px;
   }
 }
 
@@ -367,11 +367,11 @@
   }
 
   .arrow-btn{
-    top:40%;
+    top:31.5%;
   }
 
  .overlay {
-    top: 70%;
+    top: 50%;
   }
 
   .arrow-btn::before {
@@ -396,7 +396,7 @@
   }
 
   .dots {
-    bottom: -20px;
+    bottom: 220px;
   }
 }
 
@@ -407,11 +407,11 @@
   }
 
   .arrow-btn{
-    top:38%;
+    top:32%;
   }
 
  .overlay {
-    top: 53%;
+    top: 50%;
   }
 
   .arrow-btn::before {
@@ -437,7 +437,7 @@
   }
 
  .dots {
-    bottom: 100px;
+    bottom: 210px;
   }
 
 }
