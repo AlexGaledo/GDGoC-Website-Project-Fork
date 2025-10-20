@@ -53,76 +53,79 @@ export default function Slideshow() {
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
 
   return (
-   <section className="slideshow-wrap">
-    <Navbar />
-    
-      <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
-        {slides.map((slide, index) => (
-          <div
-            className="slide"
-            key={index}
-            style={{ backgroundImage: `url(${slide})` }}
-          /> 
-        ))} <AnimationBackground />
-      </div> 
+    <div>
+      <Navbar />
+      <section className="slideshow-wrap">
+      
+        <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
+          {slides.map((slide, index) => (
+            <div
+              className="slide"
+              key={index}
+              style={{ backgroundImage: `url(${slide})` }}
+            /> 
+          ))} <AnimationBackground />
+        </div> 
 
 
-      <div className="overlay">
-        <h1>
-          Connecting Student Developers<br/> with the Power of{" "}
-          <span className="google">
-            <span>G</span>
-            <span>o</span>
-            <span>o</span>
-            <span>g</span>
-            <span>l</span>
-            <span>e</span>
-          </span> {" "} Technologies
-        </h1> 
+        <div className="overlay">
+          <h1>
+            Connecting Student Developers<br/> with the Power of{" "}
+            <span className="google">
+              <span>G</span>
+              <span>o</span>
+              <span>o</span>
+              <span>g</span>
+              <span>l</span>
+              <span>e</span>
+            </span> {" "} Technologies
+          </h1> 
 
-        <p>
-          The official Google Developer Groups on Campus at 
-          <span className="tup"> <br/>
-            Technological University of the Philippines - Manila
-          </span>
-        </p> 
+          <p>
+            The official Google Developer Groups on Campus at 
+            <span className="tup"> <br/>
+              Technological University of the Philippines - Manila
+            </span>
+          </p> 
 
-         <button 
-            className="btn-primary" 
-            onClick={() => navigate("/discover")}
-         >
-           Discover GDGoC
-        </button>
-      </div>
-
-      <div>  
-        
-         <button
-            className="arrow-btn prev"
-            onClick={goPrev}
-            aria-label="Previous slide"
-          />
-
-          <button
-            className="arrow-btn next"
-            onClick={goNext}
-            aria-label="Next slide"
-          />
-                    
-        {/* dots */}
-        <div className="dots">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              className={`dot ${i === current ? "active" : ""}`}
-              onClick={() => setCurrent(i)}
-              aria-label={`Go to slide ${i + 1}`}
-            />
-          ))}
+          <button 
+              className="btn-primary" 
+              onClick={() => navigate("/discover")}
+          >
+            Discover GDGoC
+          </button>
         </div>
-      </div>
 
-      {/* sponsors row */}
+        <div >  
+          
+          <button
+              className="arrow-btn prev"
+              onClick={goPrev}
+              aria-label="Previous slide"
+            />
+
+            <button
+              className="arrow-btn next"
+              onClick={goNext}
+              aria-label="Next slide"
+            />
+                      
+          {/* dots */}
+          <div className="dots">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                className={`dot ${i === current ? "active" : ""}`}
+                onClick={() => setCurrent(i)}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* sponsors row */}
+
+      </section>
       <div className="sponsors">
         <img
           src={isDatacampHover ? datacampColor : datacampBW}
@@ -138,6 +141,6 @@ export default function Slideshow() {
         />
       </div>
       <Footer />
-    </section>
+    </div>
   );
 }
