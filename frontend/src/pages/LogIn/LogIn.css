@@ -44,6 +44,16 @@
     z-index: 2000 !important;
 }
 
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    top: 0px;
+    bottom: 0px;
+    position: relative;
+    z-index: 11;
+}
 
 
 .LogIn{
@@ -69,6 +79,11 @@
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 0;
+}
+
+/* exit animation */
+.login-exit {
+  animation: slideOutUp 0.3s ease-in forwards;
 }
 
 

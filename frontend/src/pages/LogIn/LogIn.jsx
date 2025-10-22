@@ -62,31 +62,34 @@ function LogIn({ onClose, isClosing }) {
                 }}
                 onClick={(e) => e.stopPropagation()}
             >
-                <AnimationBackground />
-                <div className="LogIn">
-                    <h1>Log in</h1>
-                    <p className="greet">Hello, welcome back to your account</p>
-                    
-                    <div className="IdContainer">
-                        <span className="IdIcon"></span>
-                        <input type="text" 
-                        placeholder="GDGOC ID" 
-                        className="idInput"
-                        value={googler_id}
-                        onChange={(e)=>{setGooglerId(e.target.value)}}/>
-                    </div>
-                    
-                    <div className="passwordContainer">
-                        <span className="PasswordIcon"></span>
-                        <input type="password" 
-                        placeholder="Password" 
-                        className="passwordInput"
-                        value ={password}
-                        onChange={(e)=>{setPassword(e.target.value)}}/>
-                    </div>
-                    
-                    <button className="logInButton" onClick={login}>Log in</button>
-                </div> 
+                <div className='login-container' onClick={(e) => e.stopPropagation()}                                   >
+                    <AnimationBackground />
+                    <button className='ph--triangle-fill' onClick={handleExit}></button>
+                    <div className="LogIn">
+                        <h1>Log in</h1>
+                        <p className="greet">Hello, welcome back to your account</p>
+                        
+                        <div className="IdContainer">
+                            <span className="IdIcon"></span>
+                            <input type="text" 
+                            placeholder="GDGOC ID" 
+                            className="idInput"
+                            value={googler_id}
+                            onChange={(e)=>{setGooglerId(e.target.value)}}/>
+                        </div>
+                        
+                        <div className="passwordContainer">
+                            <span className="PasswordIcon"></span>
+                            <input type="password" 
+                            placeholder="Password" 
+                            className="passwordInput"
+                            value ={password}
+                            onChange={(e)=>{setPassword(e.target.value)}}/>
+                        </div>
+                        
+                        <button className="logInButton" onClick={login}>Log in</button>
+                    </div> 
+                </div>
             </div>
        </>
     );

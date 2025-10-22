@@ -171,7 +171,8 @@ function Navbar() {
               <LogIn onClose={handleLoginClose} isClosing={isLoginClosing}/>
           </div>
         )
-        }
+      }
+
     </>
   );
 }
