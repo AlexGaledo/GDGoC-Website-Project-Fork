@@ -36,8 +36,6 @@ function Project(){
         image = {websiteProjectImg}
         title = "GDGoC TUPM - Official Website"
         description = "Welcome to the Google Developer Student Club - TUP Manila website. Immerse yourself in a community of dedicated members, uncover a diverse array of services, and actively engage in the development of unforgettable projects!"
-        designer="Juan Dela Cruz"
-        developer="Cruz Dela Juan"
       />
       <div className={`${styles.container1} d-md-none d-flex`}>
         <img src={stayTunedMobile} alt="stay-tuned" />

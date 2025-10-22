@@ -48,6 +48,7 @@
   transition: color 0.3s ease, transform 0.1s ease;
   transform-origin: left;
   overflow: visible;
+  font-size: 18px;
 }
 
 .events svg {
@@ -64,7 +65,7 @@
 
 .home {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
@@ -77,7 +78,7 @@
 
 .project {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
@@ -90,7 +91,7 @@
 
 .team {
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   transition: color 0.3s ease, transform 0.1s ease;
   display: inline-block;
   transform-origin: left;
