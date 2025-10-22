@@ -3,7 +3,13 @@ import React, { useState, useContext} from 'react';
 import Camera from './Profile-assets/camera.svg';
 import { useUser } from '../../context/UserContext';
 import AnimationBackground from '../AnimationBackground/AnimationBackground';
-function Profile({ onClose , isClosing }){
+
+
+function Profile({ onClose , onSignOut}){
+    const [showLogin, setShowLogin] = useState(false);
+    const [exiting, setExiting] = useState(false);
+
+
     const { firstName, 
             lastName, 
             username, 
@@ -13,11 +19,16 @@ function Profile({ onClose , isClosing }){
             profilePic, 
             setProfilePic } = useUser();
 
-
-    const [exiting, setExiting] = useState(false);
-
     const handleExit = () => {
         setExiting(true); 
+    };  
+
+    const handleSignOut = () => {
+        setExiting(true);
+        // Call parent's sign-out handler after animation
+        setTimeout(() => {
+            onSignOut();
+        }, 300); // Match animation duration
     };
 
     const handleFileChange = (event) => {
@@ -31,7 +42,6 @@ function Profile({ onClose , isClosing }){
         }
     };
 
-
     return(
         <div  
             className={`profile-modal-wrapper ${exiting ? "profile-exit" : ""}`}
@@ -44,9 +54,9 @@ function Profile({ onClose , isClosing }){
                 
                 <button className='ph--triangle-fill' onClick={handleExit}></button>
 
-                <div className='logOut profile'>
-                    <span class="logoutText"></span> 
-                    <span class="logoutIcon"></span>
+                <div className='logOut profile' onClick={handleSignOut} role='button'>
+                    <span className="logoutText"></span> 
+                    <span className="logoutIcon"></span>
                 </div>
 
                 <div className="name">

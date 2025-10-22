@@ -13,8 +13,30 @@ function Navbar() {
   const [isClosing, setIsClosing] = useState(false);
   const [isLoginClosing, setIsLoginClosing] = useState(false);
 
-  const { profilePic, gdgID } = useUser();
+  // const { profilePic, gdgID } = useUser();
+  const { gdgID, setGdgID, setUser, profilePic } = useUser();
 
+  const handleSignOut = () => {
+    // Clear user data
+    setGdgID(null);
+    setUser(null);
+    
+    // Close profile
+    setShowProfile(false);
+    
+    // Show login
+    setShowLogin(true);
+
+    console.log('After sign out (before state updates):', { gdgID, showLogin });
+
+      const offcanvasElement = document.getElementById('sideBar');
+      if (offcanvasElement) {
+        const bsOffcanvas = window.bootstrap.Offcanvas.getInstance(offcanvasElement);
+        if (bsOffcanvas) {
+          bsOffcanvas.hide();
+        }
+      }
+  };
 
   const handleClose = () => {
     setIsClosing(true); // trigger exit animation
@@ -115,10 +137,12 @@ function Navbar() {
               </g>
             </svg>
           </button>
-          <div className='logOut'>
+
+          <div className='logOut' role="button" data-bs-dismiss='offcanvas' onClick={handleSignOut}>
             <span className="logoutText"></span> 
             <span className="logoutIcon"></span>
           </div>
+
         </div>
         {/* Sidebar sections */}
         <div className='offcanvas-body'>
@@ -158,20 +182,27 @@ function Navbar() {
       </div>
       
       
-      {showProfile && gdgID?
-        (
-          <div className="profile-modal-overlay" onClick={handleClose}>
-            <Profile onClose={handleClose} isClosing={isClosing}/>
-          </div>
-        )
-        :
-        showLogin && !gdgID &&
-        (
-          <div className="OverlayLogIn" onClick={handleLoginClose}>
-              <LogIn onClose={handleLoginClose} isClosing={isLoginClosing}/>
-          </div>
-        )
-      }
+      {showProfile && gdgID && (
+        <div className="profile-modal-overlay" onClick={handleClose}>
+          <Profile 
+            onClose={handleClose} 
+            onSignOut={handleSignOut} 
+            isClosing={isClosing} 
+          />
+        </div>
+      )}
+
+      {/* Login Modal - only show if no user is logged in */}
+      {showLogin && !gdgID && (
+        <div className="OverlayLogIn" onClick={handleLoginClose}>
+          <LogIn 
+            onClose={handleLoginClose} 
+            isClosing={isLoginClosing} 
+          />
+        </div>
+      )}
+      
+
 
     </>
   );

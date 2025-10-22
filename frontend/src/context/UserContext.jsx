@@ -8,10 +8,17 @@ const UserContext = createContext();
 export const UserProvider = ({ children }) => {
     const [firstName, setFirstName] = useState("Firstname");
     const [lastName, setLastName] = useState("Lastname");
-    const [username, setUsername] = useState("@username");
-    const [gdgID, setGdgID] = useState(null);
+    const [username, setUsername] = useState("@");
+    const [gdgID, setGdgID] = useState("");
     const [expNumber, setExpNumber] = useState(1000);
-    const [idPad, setIdPad] = useState("GDGTUP-25-1448");
+    // const [idPad, setIdPad] = useState("");
+    
+    const [user, setUser] = useState({
+        firstName: "John",
+        lastName: "Doe",
+        username: "johndoe",
+        gdgID: "GDGTUP-25-1448"
+    });
     
     const [profilePic, setProfilePic] = useState(() => {
         const storedPic = localStorage.getItem("profilePic");
@@ -27,6 +34,16 @@ export const UserProvider = ({ children }) => {
         }
     }, [profilePic]);
 
+    const logout = () => {
+        setGdgID(null); // Fix: should be null, not 123
+        setUser(null);
+        setFirstName("Firstname");
+        setLastName("Lastname");
+        setUsername("@username");
+        setProfilePic(null);
+        localStorage.removeItem("profilePic");
+    };
+
     return (
         <UserContext.Provider value={{
             firstName, setFirstName,
@@ -34,8 +51,9 @@ export const UserProvider = ({ children }) => {
             username, setUsername,
             gdgID, setGdgID,
             expNumber, setExpNumber,
-            idPad, setIdPad,
-            profilePic, setProfilePic
+            profilePic, setProfilePic,
+            user, setUser,
+            logout,
         }}>
             {children}    
         </UserContext.Provider>     

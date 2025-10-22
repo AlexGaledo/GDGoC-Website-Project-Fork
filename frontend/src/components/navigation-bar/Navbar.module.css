@@ -134,7 +134,7 @@
 
 
 .profilePicNavbar {
-    border: solid 2px hsla(0, 0%, 0%, 0.87);
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
