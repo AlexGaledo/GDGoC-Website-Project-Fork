@@ -10,6 +10,7 @@ import Project from './pages/project-page/Project.jsx';
 import MembershipClosed from './pages/MembershipClosed.jsx';
 import Error404 from './pages/Error404.jsx';
 import UnderConstruction from './pages/UnderConstruction.jsx';
+import Login from './pages/Login/Login.jsx';
 
 function App() {
   return(
