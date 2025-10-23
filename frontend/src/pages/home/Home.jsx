@@ -37,7 +37,7 @@ const slides = [
   slide_default_10,
 ];
 
-export default function Slideshow() {
+export default function Slideshow() { 
   const [current, setCurrent] = useState(0);
 
   const [isPrevHover, setIsPrevHover] = useState(false);
@@ -48,7 +48,7 @@ export default function Slideshow() {
 
   const navigate = useNavigate(); 
 
-  const goPrev = () => setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1));
+  const goPrev = () => setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1)); 
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
 
@@ -56,13 +56,13 @@ export default function Slideshow() {
     <div>
       <Navbar />
       <section className="slideshow-wrap">
-      
+      <AnimationBackground />
         <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
           {slides.map((slide, index) => (
             <div
               className="slide"
               key={index}
-              style={{ backgroundImage: `url(${slide})` }}
+              style={{ backgroundImage: `url(${slide})` }} 
             /> 
           ))} <AnimationBackground />
         </div> 
@@ -124,22 +124,22 @@ export default function Slideshow() {
         </div>
 
         {/* sponsors row */}
-
+        <div className="sponsors">``
+          <img
+            src={isDatacampHover ? datacampColor : datacampBW}
+            alt="Datacamp"
+            onMouseEnter={() => setIsDatacampHover(true)}
+            onMouseLeave={() => setIsDatacampHover(false)}
+          />
+          <img
+            src={isGithubHover ? githubColor : githubBW}
+            alt="GitHub"
+            onMouseEnter={() => setIsGithubHover(true)}
+            onMouseLeave={() => setIsGithubHover(false)}
+          />
+        </div>
       </section>
-      <div className="sponsors">
-        <img
-          src={isDatacampHover ? datacampColor : datacampBW}
-          alt="Datacamp"
-          onMouseEnter={() => setIsDatacampHover(true)}
-          onMouseLeave={() => setIsDatacampHover(false)}
-        />
-        <img
-          src={isGithubHover ? githubColor : githubBW}
-          alt="GitHub"
-          onMouseEnter={() => setIsGithubHover(true)}
-          onMouseLeave={() => setIsGithubHover(false)}
-        />
-      </div>
+    
       <Footer />
     </div>
   );

@@ -52,5 +52,13 @@
 @media (max-width: 600px) {
   .blob {
     width: 160px;
+    filter: blur(100px);
+  }
+}
+
+@media (max-width: 480px) {
+  .blob {
+    width: 120px;
+    filter: blur(100px);
   }
 }
