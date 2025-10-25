@@ -4,7 +4,7 @@ import logo from '../../assets/images/GDGOC logo.svg';
 import hamburgerBar from '../../assets/images/Hamburger-bar.svg';
 import Profile from '../Profile/Profile';
 import { useUser } from '../../context/UserContext';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import LogIn from '../../pages/LogIn/LogIn';
 
 function Navbar() {
@@ -13,48 +13,40 @@ function Navbar() {
   const [isClosing, setIsClosing] = useState(false);
   const [isLoginClosing, setIsLoginClosing] = useState(false);
 
-  // const { profilePic, gdgID } = useUser();
-  const { gdgID, setGdgID, setUser, profilePic } = useUser();
+  const { gdgID, logout, profilePic } = useUser();
 
   const handleSignOut = () => {
-    // Clear user data
-    setGdgID(null);
-    setUser(null);
     
-    // Close profile
+    logout();
     setShowProfile(false);
-    
-    // Show login
-    setShowLogin(true);
-
+  
     console.log('After sign out (before state updates):', { gdgID, showLogin });
 
-      const offcanvasElement = document.getElementById('sideBar');
-      if (offcanvasElement) {
-        const bsOffcanvas = window.bootstrap.Offcanvas.getInstance(offcanvasElement);
-        if (bsOffcanvas) {
-          bsOffcanvas.hide();
-        }
-      }
+    closeSidebar();
+
+    // Delay showing login until sidebar is fully closed
+    setTimeout(() => {
+      setShowLogin(true);
+    }, 300); 
   };
 
   const handleClose = () => {
-    setIsClosing(true); // trigger exit animation
+    setIsClosing(true); 
     setTimeout(() => {
-      setShowProfile(false); // unmount AFTER animation
-      setIsClosing(false);   // reset
+      setShowProfile(false); 
+      setIsClosing(false);   
     }, 300); 
   };
 
   const handleLoginClose = () => {
-    setIsLoginClosing(true); // trigger exit animation
+    setIsLoginClosing(true); 
     setTimeout(() => {
-      setShowLogin(false); // unmount AFTER animation
-      setIsLoginClosing(false);   // reset
+      setShowLogin(false);
+      setIsLoginClosing(false);   
     }, 300); 
   };
 
-  // for restoring scroll when sections are clicked in the sidebar
+  
   const handleNavClick = () => {
     // restore scroll
     document.body.style.overflow = "auto";
@@ -62,6 +54,16 @@ function Navbar() {
     // reset unwanted padding/margin
     document.body.style.paddingRight = "0px";
     document.body.style.paddingLeft = "0px";
+  };
+
+  const closeSidebar = () => {
+    const el = document.getElementById('sideBar');
+    if (!el) return;
+
+    const dismissBtn = el.querySelector('[data-bs-dismiss="offcanvas"]');
+    if (dismissBtn) {
+      dismissBtn.click();
+    }
   };
 
   return (
@@ -149,6 +151,7 @@ function Navbar() {
           <div className='d-flex flex-column align-items-center'>
             <button type='button' className={styles.profile}
               onClick={e => {
+                closeSidebar();
                 if (gdgID) {
                   setShowProfile(true);
                 } else {

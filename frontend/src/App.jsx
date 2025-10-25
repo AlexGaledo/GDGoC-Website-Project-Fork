@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import ScrollToTop from './components/ScrollToTop.js';
-
 import "./index.css"; 
 import Discover from './pages/Discover/discover.jsx';
 import Home from './pages/home/Home.jsx';
@@ -10,7 +9,6 @@ import Project from './pages/project-page/Project.jsx';
 import MembershipClosed from './pages/MembershipClosed.jsx';
 import Error404 from './pages/Error404.jsx';
 import UnderConstruction from './pages/UnderConstruction.jsx';
-import Login from './pages/Login/Login.jsx';
 
 function App() {
   return(

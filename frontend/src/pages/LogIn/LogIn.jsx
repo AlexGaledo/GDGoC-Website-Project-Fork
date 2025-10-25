@@ -9,7 +9,7 @@ function LogIn({ onClose, isClosing }) {
     const [password, setPassword] = useState('');
     const [exiting, setExiting] = useState(false);
 
-    const {setFirstName, setLastName, setUsername, setGdgID, setExpNumber, setIdPad} = useUser()
+    const {setFirstName, setLastName, setUsername, setGdgID, setGdg_pts} = useUser()
 
     const handleExit = () => {
         setExiting(true); 
@@ -31,8 +31,7 @@ function LogIn({ onClose, isClosing }) {
                 setFirstName(res.data.first_name)
                 setLastName(res.data.last_name)
                 setGdgID(googler_id)
-                setExpNumber(res.data.gdg_pts)
-                setIdPad(res.data.tupm_id)
+                setGdg_pts(res.data.gdg_pts)
                 window.alert(res.data.response)
                 
                 // Close the login modal after successful login

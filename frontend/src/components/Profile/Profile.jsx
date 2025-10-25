@@ -5,19 +5,10 @@ import { useUser } from '../../context/UserContext';
 import AnimationBackground from '../AnimationBackground/AnimationBackground';
 
 
-function Profile({ onClose , onSignOut}){
-    const [showLogin, setShowLogin] = useState(false);
+function Profile({ onClose , onSignOut, isClosing}){
     const [exiting, setExiting] = useState(false);
+    const { firstName, lastName, username, gdgID, expNumber, profilePic, setProfilePic} = useUser()
 
-
-    const { firstName, 
-            lastName, 
-            username, 
-            gdgID, 
-            expNumber, 
-            idPad, 
-            profilePic, 
-            setProfilePic } = useUser();
 
     const handleExit = () => {
         setExiting(true); 
@@ -25,10 +16,10 @@ function Profile({ onClose , onSignOut}){
 
     const handleSignOut = () => {
         setExiting(true);
-        // Call parent's sign-out handler after animation
+        
         setTimeout(() => {
             onSignOut();
-        }, 300); // Match animation duration
+        }, 300);
     };
 
     const handleFileChange = (event) => {
@@ -36,7 +27,7 @@ function Profile({ onClose , onSignOut}){
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => {
-                setProfilePic(reader.result); // base64 string
+                setProfilePic(reader.result); 
             };
             reader.readAsDataURL(file);
         }
@@ -44,10 +35,11 @@ function Profile({ onClose , onSignOut}){
 
     return(
         <div  
-            className={`profile-modal-wrapper ${exiting ? "profile-exit" : ""}`}
+            className={`profile-modal-wrapper ${exiting || isClosing? "profile-exit" : ""}`}
             onAnimationEnd={() => {
                 if (exiting) onClose(); 
             }}
+            onClick={(e) => e.stopPropagation()}
         >
             <div className="profile-container" onClick={(e) => e.stopPropagation()}>
                 <AnimationBackground />
@@ -81,8 +73,12 @@ function Profile({ onClose , onSignOut}){
                         />
                     </div>
                     <div className="user-name-id">
-                        <p className='username'>{username}</p>
-                        <p className='gdgID'>{idPad}{gdgID}</p>
+                        <p className='username'>
+                            <span className='username-@'>@</span>{username}
+                        </p>
+                        <p className='gdgID'>
+                            <span className='gdgID-prefix'>GDGTUP-25-</span>{gdgID}
+                        </p>
                     </div>
                 </div>
                 <div className="exp-box">
