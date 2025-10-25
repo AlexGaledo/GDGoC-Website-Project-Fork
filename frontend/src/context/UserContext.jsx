@@ -57,7 +57,7 @@ export const UserProvider = ({ children }) => {
         setFirstName();
         setLastName();
         setUsername();
-        setProfilePic(0);
+        setGdg_pts(null);
         setProfilePic(null);
         localStorage.removeItem("profilePic");
         localStorage.removeItem("googler_id");

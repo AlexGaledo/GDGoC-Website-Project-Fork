@@ -16,7 +16,6 @@ function Navbar() {
   const { gdgID, logout, profilePic } = useUser();
 
   const handleSignOut = () => {
-    
     logout();
     setShowProfile(false);
   
@@ -139,11 +138,13 @@ function Navbar() {
               </g>
             </svg>
           </button>
-
-          <div className='logOut' role="button" data-bs-dismiss='offcanvas' onClick={handleSignOut}>
-            <span className="logoutText"></span> 
-            <span className="logoutIcon"></span>
-          </div>
+          
+          {gdgID && (
+            <div className='logOut' role="button" data-bs-dismiss='offcanvas' onClick={handleSignOut}>
+              <span className="logoutText"></span> 
+              <span className="logoutIcon"></span>
+            </div>
+          )}
 
         </div>
         {/* Sidebar sections */}
