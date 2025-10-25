@@ -8,7 +8,10 @@ export const UserProvider = ({ children }) => {
     const [firstName, setFirstName] = useState(() => localStorage.getItem("firstName") || "");
     const [lastName, setLastName] = useState(() => localStorage.getItem("lastName") || "");
     const [username, setUsername] = useState(() => localStorage.getItem("username") || "");
-    const [gdg_pts, setGdg_pts] = useState(() => localStorage.getItem("gdg_pts") || null);
+    const [gdg_pts, setGdg_pts] = useState(() => {
+        const stored = localStorage.getItem("gdg_pts");
+        return stored !== null ? Number(stored) : 0;
+    });
     const [profilePic, setProfilePic] = useState(() => localStorage.getItem("profilePic") || null);
     const [gdgID, setGdgID] = useState(() => localStorage.getItem("googler_id") || null);
     
@@ -29,8 +32,11 @@ export const UserProvider = ({ children }) => {
     }, [username]);
 
     useEffect(() => {
-        if (gdg_pts) localStorage.setItem("gdg_pts", gdg_pts);
-        else localStorage.removeItem("gdg_pts");
+        if (gdg_pts === null || gdg_pts === undefined) {
+            localStorage.removeItem("gdg_pts");
+        } else {
+            localStorage.setItem("gdg_pts", gdg_pts);
+        }
     }, [gdg_pts]);
 
     useEffect(() => {
@@ -50,7 +56,8 @@ export const UserProvider = ({ children }) => {
         setGdgID(null); 
         setFirstName();
         setLastName();
-        setUsername("@");
+        setUsername();
+        setProfilePic(0);
         setProfilePic(null);
         localStorage.removeItem("profilePic");
         localStorage.removeItem("googler_id");

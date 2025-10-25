@@ -7,7 +7,7 @@ import AnimationBackground from '../AnimationBackground/AnimationBackground';
 
 function Profile({ onClose , onSignOut, isClosing}){
     const [exiting, setExiting] = useState(false);
-    const { firstName, lastName, username, gdgID, expNumber, profilePic, setProfilePic} = useUser()
+    const { firstName, lastName, username, gdgID, gdg_pts, profilePic, setProfilePic} = useUser()
 
 
     const handleExit = () => {
@@ -82,7 +82,7 @@ function Profile({ onClose , onSignOut, isClosing}){
                     </div>
                 </div>
                 <div className="exp-box">
-                        <p className='exp-num'>{expNumber}</p>
+                        <p className='exp-num'>{gdg_pts}</p>
                         <p className='xp'>XP</p>
                 </div>
             </div>
