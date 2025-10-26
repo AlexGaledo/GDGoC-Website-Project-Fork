@@ -11,6 +11,10 @@
 }
 
 /* Sidebar */
+.offcanvas-header {
+  position: relative; 
+}
+
 .hamburgerBar {
   border: none;
   background: none;
