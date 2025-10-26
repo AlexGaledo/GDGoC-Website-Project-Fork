@@ -8,6 +8,7 @@ function LogIn({ onClose, isClosing }) {
     const [googler_id, setGooglerId] = useState('');
     const [password, setPassword] = useState('');
     const [exiting, setExiting] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const {setFirstName, setLastName, setUsername, setGdgID, setGdg_pts} = useUser()
 
@@ -17,7 +18,12 @@ function LogIn({ onClose, isClosing }) {
 
     const login = async(e) => {
         e.preventDefault()
+
+        if (isLoading) return;
+
         console.log('login clicked')
+        setIsLoading(true);
+
         try{
             const res = await backend.post('auth/sign-in',{
                     googler_id,
@@ -42,6 +48,7 @@ function LogIn({ onClose, isClosing }) {
             console.error('Login error:', error);
             const msg = error?.response?.data?.response || 'Login failed. Please try again.';
             window.alert(msg);
+            setIsLoading(false);
         } finally {
             setGooglerId('')
             setPassword('')          
@@ -86,7 +93,9 @@ function LogIn({ onClose, isClosing }) {
                             onChange={(e)=>{setPassword(e.target.value)}}/>
                         </div>
                         
-                        <button className="logInButton" onClick={login}>Log in</button>
+                        <button className="logInButton" onClick={login} disabled={isLoading}>
+                            {isLoading ? 'Logging in...' : 'Log in'}
+                        </button>
                     </div> 
                 </div>
             </div>
