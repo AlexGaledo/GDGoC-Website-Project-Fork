@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import "./Discover.css";
 import Navbar from "../../components/navigation-bar/Navbar.jsx";
@@ -76,7 +78,7 @@ export default function Discover() {
           </div>
           <div>
             <button className="btn-primary" onClick={() => navigate("/project")}>
-              Projects
+              Projects 
             </button>
           </div>
         </section>
@@ -121,15 +123,15 @@ export default function Discover() {
             <p> <span className="faq-question">Is there a Membership Fee?</span></p>
             <p>Google Developer Groups on Campus is a Student led Non-Profit
               Organization. We don't require any membership fees to our aspiring
-              Junior Googlers.</p>
+              Junior Googlers.</p><br/>
 
             <p><span className="faq-question"> Are events held online or hybrid?</span></p>
             <p>The events can be held either online or in-person (face to face),
-              depending on the circumstances and preferences.</p>
+              depending on the circumstances and preferences.</p><br/>
 
             <p><span className="faq-question"> I'm not from TUP Manila, can I still join?</span></p>
             <p>Unfortunately, we only accept TUP Manila students as of the
-              moment.</p>
+              moment.</p><br/>
           </div>
         </section>
       <hr className="section-divider" />
