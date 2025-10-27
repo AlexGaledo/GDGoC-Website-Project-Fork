@@ -151,7 +151,7 @@
     height: 45px;
     border: 1px solid hsla(0, 0%, 90%, 1.00);
     border-radius: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .passwordContainer .PasswordIcon{
@@ -211,4 +211,131 @@
     background-color: hsla(151, 83%, 34%, 1.00);
     box-shadow: 0px 2px 8px hsla(151, 83%, 44%, 0.40);
     border: none;
+}
+
+
+
+/* Tablet Size */
+@media (max-width: 1200px) {
+    .LogIn {
+        width: 100%;
+        height: auto;
+        padding: 20px 30px;
+        border-radius: 28px;
+    }
+
+    .LogIn h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+        margin-top: 4px;
+    }
+
+    .LogIn .greet {
+        font-size: 14px;
+        margin-bottom: 25px;
+        margin-top: 0px;
+    }
+
+    .IdContainer,
+    .passwordContainer {
+        width: 80%;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .IdContainer .IdIcon,
+    .passwordContainer .PasswordIcon {
+        width: 18px;
+        height: 18px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .IdContainer .idInput,
+    .passwordContainer .passwordInput {
+        font-size: 13px;
+    }
+
+    .IdContainer .idInput::placeholder,
+    .passwordContainer .passwordInput::placeholder {
+        font-size: 13px;
+    }
+
+    .logInButton {
+        width: 85%;
+        height: 40px;
+        border-radius: 8px;
+        font-size: 14px;
+        margin-top: 25px;
+        letter-spacing: 1.5px;
+    }
+
+    .ph--triangle-fill {
+        top: -50px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Mobile Size */
+@media (max-width: 700px) {
+    .LogIn {
+        width: 95%;
+        height: auto;
+        padding: 16px 24px;
+        border-radius: 20px;
+    }
+
+    .LogIn h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        margin-top: 3px;
+    }
+
+    .LogIn .greet {
+        font-size: 11px;
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+
+    .IdContainer,
+    .passwordContainer {
+        width: 80%;
+        height: 36px;
+        border-radius: 8px;
+        margin-bottom: 6px;
+    }
+
+    .IdContainer .IdIcon,
+    .passwordContainer .PasswordIcon {
+        width: 16px;
+        height: 16px;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .IdContainer .idInput,
+    .passwordContainer .passwordInput {
+        font-size: 12px;
+    }
+
+    .IdContainer .idInput::placeholder,
+    .passwordContainer .passwordInput::placeholder {
+        font-size: 12px;
+    }
+
+    .logInButton {
+        width: 90%;
+        height: 36px;
+        border-radius: 8px;
+        font-size: 13px;
+        margin-top: 20px;
+        letter-spacing: 1px;
+    }
+
+    .ph--triangle-fill {
+        top: -40px;
+        width: 25px;
+        height: 25px;
+    }
 }
