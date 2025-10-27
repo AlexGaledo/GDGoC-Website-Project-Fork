@@ -62,7 +62,8 @@ function ChangePassword({ onClose, isClosing }) {
                         <div className="IdContainer">
                             <span className="IdIcon"></span>
                             <input type="text" placeholder="GDGOC ID" className="idInput"
-                            value={gdgocid} onChange={(e)=>{setGgdocid(e.target.value)}} equired/>
+                            value={gdgocid} onChange={(e)=>{setGgdocid(e.target.value)}}/> 
+                            {/* I removed equired */}
                         </div>
                         
                         <div className="OldPasswordContainer">
