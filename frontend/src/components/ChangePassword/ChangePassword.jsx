@@ -54,7 +54,7 @@ function ChangePassword({ onClose, isClosing }) {
                 }}
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="OverlayChangePassword">
+                <div className="OverlayChangePassword-container">
                     <AnimationBackground />
                     <div className="ChangePassword">
                         <h1>Change Password</h1>

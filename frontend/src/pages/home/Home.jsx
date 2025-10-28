@@ -23,7 +23,7 @@ import datacampBW from "../../assets/home-images/datacamp_1.png";
 import datacampColor from "../../assets/home-images/datacamp_2.png";
 import githubBW from "../../assets/home-images/github_1.png";
 import githubColor from "../../assets/home-images/github_2.png";
-import ChatbotOverlay from '../../components/chatbot/ChatBotOverlay';
+import Chatbot from '../../components/chatbot/ChatBotOverlay';
 
 const slides = [
   slide_default_1,  
@@ -66,7 +66,7 @@ export default function Home() {
 
   return (
   <>
-  <ChatbotOverlay />
+  <Chatbot/>
    <section className="slideshow-wrap">
     <Navbar />    
       <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
