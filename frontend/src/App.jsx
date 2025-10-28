@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 import ScrollToTop from './components/ScrollToTop.js';
+import ChatbotOverlay from './components/chatbot/ChatBotOverlay.jsx';
 import "./index.css"; 
 import Discover from './pages/Discover/discover.jsx';
 import Home from './pages/home/Home.jsx';
@@ -27,6 +28,7 @@ function App() {
           <Route path='/Change-Password' element={<ChangePassword />} />
           <Route path='*'element={<Error404 />} />
         </Routes>
+        <ChatbotOverlay />
       </Router>
     </UserProvider>
   );

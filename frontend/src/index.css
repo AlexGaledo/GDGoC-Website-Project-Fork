@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'ProductSans';
   src: url('./assets/fonts/ProductSans-Medium.ttf') format('truetype');
@@ -37,6 +41,25 @@
   src: url('./assets/fonts/ProductSans-Black.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+}
+
+/* Custom scrollbar styling */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
 }
 
 html, body, #root {
