@@ -24,14 +24,14 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message, avatar, isTyping = fal
   );
 
   return (
-    <div className={`flex items-end gap-3 ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
+    <div className={`flex items-end gap-2 ${isUser ? 'flex-row-reverse mt-2 mb-2' : 'flex-row'}`}>
        <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
         {avatar}
       </div>
       <div
-        className={`max-w-[75%] rounded-xl px-4 py-2.5 shadow-sm transition-all duration-300 ${bubbleClasses}`}
+        className={`max-w-[75%] rounded-xl px-3 py-2 shadow-sm transition-all duration-300 ${bubbleClasses}`}
       >
-        {isTyping ? typingAnimation : <p className="text-sm whitespace-pre-wrap">{message.text}</p>}
+        {isTyping ? typingAnimation : <p className="text-sm whitespace-pre-wrap m-0">{message.text}</p>}
       </div>
     </div>
   );

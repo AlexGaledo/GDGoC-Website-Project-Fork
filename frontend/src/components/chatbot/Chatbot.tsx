@@ -97,7 +97,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
         </button>
       </header>
       <div className="flex-1 p-4 overflow-y-auto bg-slate-50 custom-scrollbar">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           {messages.map((message, index) => (
             <ChatBubble
               key={message.id}

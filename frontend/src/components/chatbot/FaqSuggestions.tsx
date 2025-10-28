@@ -8,13 +8,13 @@ interface FaqSuggestionsProps {
 
 const FaqSuggestions: React.FC<FaqSuggestionsProps> = ({ suggestions, onSuggestionClick }) => {
   return (
-    <div className="flex items-end gap-3 mt-2">
+    <div className="flex items-end gap-2 mt-2">
        <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
         <GooglerAiIcon className="w-full h-full" />
       </div>
       <div className="max-w-[75%]">
         <div className="mb-3">
-            <span className="bg-yellow-100 text-slate-800 text-sm px-4 py-1.5 rounded-full">
+            <span className="bg-yellow-100 text-slate-800 text-sm px-2.5 py-1.5 rounded-full">
             Frequently Asked Questions (FAQs)
             </span>
         </div>
