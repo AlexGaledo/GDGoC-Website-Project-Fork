@@ -23,6 +23,7 @@ import datacampBW from "../../assets/home-images/datacamp_1.png";
 import datacampColor from "../../assets/home-images/datacamp_2.png";
 import githubBW from "../../assets/home-images/github_1.png";
 import githubColor from "../../assets/home-images/github_2.png";
+import ChatbotOverlay from '../../components/chatbot/ChatBotOverlay';
 
 const slides = [
   slide_default_1,  
@@ -37,11 +38,17 @@ const slides = [
   slide_default_10,
 ];
 
+
 export default function Home() {
   const [current, setCurrent] = useState(0);
 
   const [isPrevHover, setIsPrevHover] = useState(false);
   const [isNextHover, setIsNextHover] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const toggleChat = () => {
+    setIsChatOpen(prevState => !prevState);
+  };
 
   const [isDatacampHover, setIsDatacampHover] = useState(false);
   const [isGithubHover, setIsGithubHover] = useState(false);
@@ -52,10 +59,16 @@ export default function Home() {
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
 
+
+
+  
+
+
   return (
+  <>
+  <ChatbotOverlay />
    <section className="slideshow-wrap">
-    <Navbar />
-    
+    <Navbar />    
       <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
         {slides.map((slide, index) => (
           <div
@@ -139,5 +152,6 @@ export default function Home() {
       </div>
       <Footer />
     </section>
+    </>
   );
 }
