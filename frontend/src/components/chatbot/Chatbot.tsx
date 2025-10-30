@@ -82,7 +82,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
  
   return (
     
-    <div className="w-80 sm:w-96 h-[60vh] max-h-[700px] flex flex-col bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-red-500">
+    <div className="w-80 sm:w-96 h-[60vh] max-h-[700px] flex flex-col bg-red-500 rounded-2xl shadow-2xl overflow-hidden border-2 border-red-500">
       <header className="bg-red-500 text-white p-3 flex items-center justify-between gap-4 shadow-md flex-shrink-0">
         <div className="flex items-center gap-3">
           <GooglerAiIcon className="w-9 h-9" />
@@ -97,7 +97,7 @@ const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
         </button>
       </header>
       <div className="flex-1 p-4 overflow-y-auto bg-slate-50 custom-scrollbar">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           {messages.map((message, index) => (
             <ChatBubble
               key={message.id}
