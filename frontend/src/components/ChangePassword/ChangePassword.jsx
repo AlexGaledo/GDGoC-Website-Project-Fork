@@ -2,11 +2,9 @@ import './ChangePassword.css';
 import AnimationBackground from '../AnimationBackground/AnimationBackground';
 import React, { useState } from 'react';
 import backend from '../../api/axios';
-import { useNavigate } from 'react-router-dom';
 
 
 function ChangePassword({ onClose, isClosing }) {
-    const navigate = useNavigate()
     const [oldPassword, setOldPassword] = useState('')
     const [newPassword, setNewPassword] = useState('')
     const [gdgocid, setGgdocid]= useState('')
@@ -17,10 +15,23 @@ function ChangePassword({ onClose, isClosing }) {
         setExiting(true); 
     }
 
-
+    const validateForm = () => {
+        return oldPassword.trim() !== '' && 
+            (newPassword.trim() !== '' && 
+                newPassword.length >= 8 && 
+                /[A-Z]/.test(newPassword) && 
+                /[0-9]/.test(newPassword) &&
+                /[!@#$%^&*]/.test(newPassword)) && 
+            gdgocid.trim() !== '';
+    }
 
     const change_password = async (e) => {
         e.preventDefault();
+
+        if (!validateForm()) {
+            window.alert('Please fill in all fields correctly. New password must be at least 8 characters long and include at least one uppercase letter, one number, and one special character.');
+            return;
+        }
 
         if (isLoading) return;
         
@@ -61,20 +72,20 @@ function ChangePassword({ onClose, isClosing }) {
 
                         <div className="IdContainer">
                             <span className="IdIcon"></span>
-                            <input type="text" placeholder="GDGOC ID" className="idInput"
+                            <input id='gdgID' type="text" placeholder="GDGOC ID" className="idInput"
                             value={gdgocid} onChange={(e)=>{setGgdocid(e.target.value)}}/> 
                             {/* I removed equired */}
                         </div>
                         
                         <div className="OldPasswordContainer">
                             <span className="PasswordIcon"></span>
-                            <input type="password" placeholder="Old Password" className="OldPasswordInput"
+                            <input id='oldPass' type="password" placeholder="Old Password" className="OldPasswordInput"
                             value={oldPassword} onChange={(e)=>{setOldPassword(e.target.value)}}required/>
                         </div>
 
                         <div className="NewPasswordContainer">
                             <span className="PasswordIcon"></span>
-                            <input type="password" placeholder="New Password" className="NewPasswordInput"
+                            <input id='newPass' type="password" placeholder="New Password" className="NewPasswordInput"
                             value={newPassword} onChange={(e)=>{setNewPassword(e.target.value)}}required/>
                         </div>
 
