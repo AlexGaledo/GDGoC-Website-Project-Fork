@@ -5,6 +5,7 @@ import "./discover.css";
 import Navbar from "../../components/navigation-bar/Navbar.jsx";
 import Footer from "../../components/footer-section/Footer";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 /* images */
 import whoWeAre from "../../assets/home-images/who_we_are.png";
@@ -20,6 +21,11 @@ import asset_4_7 from "../../assets/home-images/asset_4_7.png";
 
 export default function Discover() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Discover | GDGoC TUPM";
+  }, []);
+
 
   return (
     <section className="content">

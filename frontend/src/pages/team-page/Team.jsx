@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 // components
 import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
@@ -22,6 +23,10 @@ import Rel from "../../assets/images/team-images/RELATIONS DEPARTMENT/relations"
 import Googlet from "../../assets/images/team-images/GOOGLET/googlet";
 
 function Team(){
+  useEffect(() => {
+    document.title = "Team | GDGoC TUPM";
+  }, []);
+
   return(
     <div className="d-flex flex-column align-items-center justify-content-center">
       <Navbar />

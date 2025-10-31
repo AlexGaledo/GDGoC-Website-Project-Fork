@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import "./Home.css";
 import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
@@ -38,6 +39,10 @@ const slides = [
 ];
 
 export default function Slideshow() { 
+  useEffect(() => {
+    document.title = "Home | GDGoC TUPM";
+  }, []);
+
   const [current, setCurrent] = useState(0);
 
   const [isPrevHover, setIsPrevHover] = useState(false);
