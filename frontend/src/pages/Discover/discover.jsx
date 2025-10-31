@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import "./Discover.css";
+import "./discover.css";
 import Navbar from "../../components/navigation-bar/Navbar.jsx";
 import Footer from "../../components/footer-section/Footer";
 import { useNavigate } from "react-router-dom";
