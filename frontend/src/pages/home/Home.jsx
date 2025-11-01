@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import "./Home.css";
 import Navbar from "../../components/navigation-bar/Navbar";
 import Footer from "../../components/footer-section/Footer";
@@ -38,8 +39,11 @@ const slides = [
   slide_default_10,
 ];
 
+export default function Slideshow() { 
+  useEffect(() => {
+    document.title = "Home | GDGoC TUPM";
+  }, []);
 
-export default function Home() {
   const [current, setCurrent] = useState(0);
 
   const [isPrevHover, setIsPrevHover] = useState(false);
@@ -55,14 +59,9 @@ export default function Home() {
 
   const navigate = useNavigate(); 
 
-  const goPrev = () => setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1));
+  const goPrev = () => setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1)); 
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
-
-
-
-  
-
 
   return (
   <>
@@ -116,42 +115,51 @@ export default function Home() {
             aria-label="Previous slide"
           />
 
+        <div >  
+          
           <button
-            className="arrow-btn next"
-            onClick={goNext}
-            aria-label="Next slide"
-          />
-                    
-        {/* dots */}
-        <div className="dots">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              className={`dot ${i === current ? "active" : ""}`}
-              onClick={() => setCurrent(i)}
-              aria-label={`Go to slide ${i + 1}`}
+              className="arrow-btn prev"
+              onClick={goPrev}
+              aria-label="Previous slide"
             />
-          ))}
-        </div>
-      </div>
 
-      {/* sponsors row */}
-      <div className="sponsors">
-        <img
-          src={isDatacampHover ? datacampColor : datacampBW}
-          alt="Datacamp"
-          onMouseEnter={() => setIsDatacampHover(true)}
-          onMouseLeave={() => setIsDatacampHover(false)}
-        />
-        <img
-          src={isGithubHover ? githubColor : githubBW}
-          alt="GitHub"
-          onMouseEnter={() => setIsGithubHover(true)}
-          onMouseLeave={() => setIsGithubHover(false)}
-        />
-      </div>
+            <button
+              className="arrow-btn next"
+              onClick={goNext}
+              aria-label="Next slide"
+            />
+                      
+          {/* dots */}
+          <div className="dots">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                className={`dot ${i === current ? "active" : ""}`}
+                onClick={() => setCurrent(i)}
+                aria-label={`Go to slide ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* sponsors row */}
+        <div className="sponsors">
+          <img
+            src={isDatacampHover ? datacampColor : datacampBW}
+            alt="Datacamp"
+            onMouseEnter={() => setIsDatacampHover(true)}
+            onMouseLeave={() => setIsDatacampHover(false)}
+          />
+          <img
+            src={isGithubHover ? githubColor : githubBW}
+            alt="GitHub"
+            onMouseEnter={() => setIsGithubHover(true)}
+            onMouseLeave={() => setIsGithubHover(false)}
+          />
+        </div>
+      </section>
+    
       <Footer />
-    </section>
-    </>
+    </div>
   );
 }
