@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 .env
+
+/src/ai-website-chatbot_gdg

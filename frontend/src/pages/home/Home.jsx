@@ -24,6 +24,7 @@ import datacampBW from "../../assets/home-images/datacamp_1.png";
 import datacampColor from "../../assets/home-images/datacamp_2.png";
 import githubBW from "../../assets/home-images/github_1.png";
 import githubColor from "../../assets/home-images/github_2.png";
+import Chatbot from '../../components/chatbot/ChatBotOverlay';
 
 const slides = [
   slide_default_1,  
@@ -47,6 +48,11 @@ export default function Slideshow() {
 
   const [isPrevHover, setIsPrevHover] = useState(false);
   const [isNextHover, setIsNextHover] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const toggleChat = () => {
+    setIsChatOpen(prevState => !prevState);
+  };
 
   const [isDatacampHover, setIsDatacampHover] = useState(false);
   const [isGithubHover, setIsGithubHover] = useState(false);
@@ -57,51 +63,57 @@ export default function Slideshow() {
   const goNext = () =>
     setCurrent((p) => (p === slides.length - 1 ? 0 : p + 1));
 
-  
-
   return (
-    <div>
-      <Navbar />
-      <section className="slideshow-wrap">
-      <AnimationBackground />
-        <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
-          {slides.map((slide, index) => (
-            <div
-              className="slide"
-              key={index}
-              style={{ backgroundImage: `url(${slide})` }} 
-            /> 
-          ))} <AnimationBackground />
-        </div> 
+  <>
+  <Chatbot/>
+   <section className="slideshow-wrap">
+    <Navbar />    
+      <div className="slideshow-track" style={{ transform: `translateX(-${current * 100}%)` }}>
+        {slides.map((slide, index) => (
+          <div
+            className="slide"
+            key={index}
+            style={{ backgroundImage: `url(${slide})` }}
+          /> 
+        ))} <AnimationBackground />
+      </div> 
 
 
-        <div className="overlay">
-          <h1>
-            Connecting Student Developers<br/> with the Power of{" "}
-            <span className="google">
-              <span>G</span>
-              <span>o</span>
-              <span>o</span>
-              <span>g</span>
-              <span>l</span>
-              <span>e</span>
-            </span> {" "} Technologies
-          </h1> 
+      <div className="overlay">
+        <h1>
+          Connecting Student Developers<br/> with the Power of{" "}
+          <span className="google">
+            <span>G</span>
+            <span>o</span>
+            <span>o</span>
+            <span>g</span>
+            <span>l</span>
+            <span>e</span>
+          </span> {" "} Technologies
+        </h1> 
 
-          <p>
-            The official Google Developer Groups on Campus at 
-            <span className="tup"> <br/>
-              Technological University of the Philippines - Manila
-            </span>
-          </p> 
+        <p>
+          The official Google Developer Groups on Campus at 
+          <span className="tup"> <br/>
+            Technological University of the Philippines - Manila
+          </span>
+        </p> 
 
-          <button 
-              className="btn-primary" 
-              onClick={() => navigate("/discover")}
-          >
-            Discover GDGoC
-          </button>
-        </div>
+         <button 
+            className="btn-primary" 
+            onClick={() => navigate("/discover")}
+         >
+           Discover GDGoC
+        </button>
+      </div>
+
+      <div>  
+        
+         <button
+            className="arrow-btn prev"
+            onClick={goPrev}
+            aria-label="Previous slide"
+          />
 
         <div >  
           
